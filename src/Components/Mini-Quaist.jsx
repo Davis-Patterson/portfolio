@@ -27,23 +27,6 @@ const MiniQuaist = () => {
               </li>
             </ul>
           </div>
-          <div className='project-imgs'>
-            <img
-              src={homeImg}
-              alt='mini-quaist-home.png'
-              className='project-img'
-            />
-            <img
-              src={tooltipImg}
-              alt='mini-quaist-tooltip.png'
-              className='project-img'
-            />
-            <img
-              src={dialogueImg}
-              alt='mini-quaist-dialogue.png'
-              className='project-img'
-            />
-          </div>
         </div>
       </section>
     </>
