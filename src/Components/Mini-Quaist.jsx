@@ -1,7 +1,7 @@
 import React from "react";
-import homeImg from "../assets/mini-quaist/mini-quaist-home.png";
-import tooltipImg from "../assets/mini-quaist/mini-quaist-tooltip.png";
-import dialogueImg from "../assets/mini-quaist/mini-quaist-dialogue.png";
+import homeImg from "/src/assets/mini-quaist/mini-quaist-home.PNG";
+import tooltipImg from "/src/assets/mini-quaist/mini-quaist-tooltip.PNG";
+import dialogueImg from "/src/assets/mini-quaist/mini-quaist-dialogue.PNG";
 
 const MiniQuaist = () => {
   return (
