@@ -75,6 +75,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+section {
+  margin: 100px 0px 0px 0px;
+}
+
 
 #root {
   margin: 0 auto;
@@ -108,3 +112,55 @@ button:focus-visible {
   margin: 15px 0px 0px 25px;
 }
 
+.miniquaist-container {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px 0px 0px 20px;
+}
+
+.project-name {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.5em;
+  font-weight: 900;
+  /* text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 5px; */
+  line-height: .8;
+  color: var(--clr-light);
+  transform: scaleY(95%);
+  margin: 15px 0px 0px 25px;
+}
+
+.project-columns {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.project-info {
+  width: 50%;
+}
+
+.project-imgs {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 50%;
+}
+
+.project-img {
+  width: 200px;
+  margin: 5px;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.list-item {
+  margin: 10px;
+}
