@@ -3,7 +3,7 @@ import React from "react";
 const MiniQuaist = () => {
   return (
     <>
-      <div className='section-container'>
+      <div className='page-container'>
         <div className='project-name'>Mini Quaist</div>
         <div className='gap' />
         <div className='project-columns'>
