@@ -1,6 +1,6 @@
 import React from "react";
 import { HashLink } from "react-router-hash-link";
-import "/src/styles/Nav.css";
+import "../styles/Nav.css";
 
 const Nav = () => {
   return (
