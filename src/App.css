@@ -76,7 +76,7 @@ button:focus-visible {
 }
 
 section {
-  margin: 100px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 
@@ -112,12 +112,18 @@ section {
   margin: 15px 0px 0px 25px;
 }
 
-.miniquaist-container {
+.section-container {
   display: flex;
   justify-content: left;
   flex-direction: column;
   width: 100%;
-  margin: 0px 0px 0px 20px;
+  height: 100vh;
+  margin: 100px 0px 20px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.gap {
+  height: 60px;
 }
 
 .project-name {
@@ -135,7 +141,7 @@ section {
 
 .project-columns {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   width: 100%;
 }
 

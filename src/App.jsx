@@ -1,14 +1,22 @@
-import { useState } from "react";
-import "./App.css";
+import React, { useState } from "react";
+import Nav from "./Components/Nav";
+import Home from "./Components/Home";
 import MiniQuaist from "./Components/Mini-Quaist";
+import Questions from "./Components/Questions";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <h1 className='title-name'>Davis Patterson</h1>
-      <h1 className='title-subtext'>{"<Software Developer />"}</h1>
-      <section>
+      <Nav />
+      <section id='home'>
+        <Home />
+      </section>
+      <section id='miniQuaist'>
         <MiniQuaist />
+      </section>
+      <section id='questions'>
+        <Questions />
       </section>
     </>
   );
