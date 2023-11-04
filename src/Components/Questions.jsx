@@ -1,27 +1,27 @@
 import React from "react";
 
-const MiniQuaist = () => {
+const Questions = () => {
   return (
     <>
       <div className='section-container'>
         <div className='gap' />
-        <div className='project-name'>Mini Quaist</div>
+        <div className='project-name'>Questions!</div>
         <div className='project-columns'>
           <div className='project-info'>
             <div className='list-items'>
               <p className='list-item'>
-                Top-down RPG video game built in React, our collaborative final
-                project.
+                Developed a Q&A platform, reminiscent of Stack Overflow, using
+                React.
               </p>
               <p className='list-item'>
-                Incorporated AI-driven NPC dialogues and image rendering.
+                Enabled users to create accounts, engage in discussions, and
+                view profiles.
               </p>
               <p className='list-item'>
-                Collaborated remotely with a team, using agile practices.
+                Collaboratively pair-programmed in a duo, using agile practices.
               </p>
               <p className='list-item'>
-                Took a lead role in developing the game mechanics, the UI/UX,
-                and mentoring fellow team members.
+                Played a pivotal role in UI/UX design and implementation.
               </p>
             </div>
           </div>
@@ -31,4 +31,4 @@ const MiniQuaist = () => {
   );
 };
 
-export default MiniQuaist;
+export default Questions;
