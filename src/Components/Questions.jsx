@@ -3,7 +3,7 @@ import React from "react";
 const Questions = () => {
   return (
     <>
-      <div className='section-container'>
+      <div className='page-container'>
         <div className='project-name'>Questions!</div>
         <div className='gap' />
         <div className='project-columns'>

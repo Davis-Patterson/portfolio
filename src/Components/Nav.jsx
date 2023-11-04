@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
-import { useLocation } from "react-router-dom";
-import headshotLogo from "/src/assets/nav/headshot-logo-background-white.svg";
 import headshotIcon from "/src/assets/nav/headshot-icon.png";
 import linkedinLogo from "/src/assets/nav/linkedin-logo.svg";
 import githubLogo from "/src/assets/nav/github-logo.svg";
@@ -55,14 +53,10 @@ const MaterialUISwitch = styled(Switch)(({ darkMode }) => ({
   },
 }));
 
-const Nav = ({ darkMode, setDarkMode }) => {
-  const location = useLocation();
-
-  const isActive = (hash) => {
-    if (location.hash === "" && hash === "#home") {
-      return true;
-    }
-    return location.hash === hash;
+const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
+  const isActive = (sectionId) => {
+    const currentSection = activeSection || "home";
+    return currentSection === sectionId;
   };
 
   const handleDarkModeChange = (event) => {
@@ -89,51 +83,53 @@ const Nav = ({ darkMode, setDarkMode }) => {
                 className='headshot-logo'
               />
             </HashLink>
-            <a
-              href='https://www.linkedin.com/in/davispatterson/'
-              className='nav-link'
-            >
-              <img
-                src={linkedinLogo}
-                alt='linkedin logo'
-                className='link-logo'
+            <div className='home-button-adjacent'>
+              <a
+                href='https://www.linkedin.com/in/davispatterson/'
+                className='nav-link'
+              >
+                <img
+                  src={linkedinLogo}
+                  alt='linkedin logo'
+                  className='link-logo'
+                />
+              </a>
+              <a href='https://github.com/Davis-Patterson' className='nav-link'>
+                <img src={githubLogo} alt='github logo' className='link-logo' />
+              </a>
+              <MaterialUISwitch
+                checked={darkMode}
+                onChange={handleDarkModeChange}
+                className='dark-toggle'
               />
-            </a>
-            <a href='https://github.com/Davis-Patterson' className='nav-link'>
-              <img src={githubLogo} alt='github logo' className='link-logo' />
-            </a>
-            <MaterialUISwitch
-              checked={darkMode}
-              onChange={handleDarkModeChange}
-              className='dark-toggle'
-            />
+            </div>
           </div>
           <div className='nav-buttons-container'>
             <HashLink
               smooth
               to='/#home'
-              className={`nav-button ${isActive("#home") ? "active" : ""}`}
+              className={`nav-button ${isActive("home") ? "active" : ""}`}
             >
               Home
             </HashLink>
             <HashLink
               smooth
               to='/#about'
-              className={`nav-button ${isActive("#about") ? "active" : ""}`}
+              className={`nav-button ${isActive("about") ? "active" : ""}`}
             >
               About
             </HashLink>
             <HashLink
               smooth
               to='/#projects'
-              className={`nav-button ${isActive("#projects") ? "active" : ""}`}
+              className={`nav-button ${isActive("projects") ? "active" : ""}`}
             >
               Projects
             </HashLink>
             <HashLink
               smooth
               to='/#contact'
-              className={`nav-button ${isActive("#contact") ? "active" : ""}`}
+              className={`nav-button ${isActive("contact") ? "active" : ""}`}
             >
               Contact
             </HashLink>
