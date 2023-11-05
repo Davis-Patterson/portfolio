@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import useLocalStorageState from 'use-local-storage-state';
 import Nav from './Components/Nav';
 import Home from './Components/Home';
 import About from './Components/About';
@@ -11,7 +12,7 @@ import { dark } from '@mui/material/styles/createPalette';
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useLocalStorageState('darkMode', false);
 
   const sections = ['home', 'about', 'projects', 'contact'];
 
