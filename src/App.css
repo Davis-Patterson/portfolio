@@ -266,14 +266,19 @@ html {
   margin: 15px 0px 0px 0px;
 }
 
+.home-container {
+  height: calc(100vh);
+}
 .page-container {
+  height: calc(100vh - 65px);
+}
+.page-container, .home-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: calc(100vh - 65px);
-  margin: 65px 0px 20px 0px;
+  margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
   position: relative;
 }
@@ -290,6 +295,11 @@ html {
 }
 
 .page-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   min-width: 1000px;
   min-height: 100%;
@@ -297,6 +307,7 @@ html {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  z-index: -20;
 }
 
 .gap {
@@ -393,6 +404,7 @@ html {
   width: 600px;
   border: 18px solid var(--clr-break);
   border-radius: 50%;
+  z-index: 20;
 }
 
 .skills-container {

@@ -12,17 +12,16 @@ import { dark } from '@mui/material/styles/createPalette';
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
+  const [activeProject, setActiveProject] = useState(null);
   const [darkMode, setDarkMode] = useLocalStorageState('darkMode', false);
-
-  const sections = ['home', 'about', 'projects', 'contact'];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log(entry.target.id);
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
+            setActiveProject(entry.target.dataset.project);
           }
         });
       },
@@ -54,19 +53,19 @@ function App() {
         activeSection={activeSection}
         setActiveSection={setActiveSection}
       />
-      <section id='home'>
+      <section id='home' data-project='none'>
         <Home />
       </section>
-      <section id='about'>
+      <section id='about' data-project='none'>
         <About activeSection={activeSection} darkMode={darkMode} />
       </section>
-      <section id='projects'>
-        <MiniQuaist activeSection={activeSection} />
+      <section id='projects' data-project='miniQuaist'>
+        <MiniQuaist activeProject={activeProject} />
       </section>
-      <section id='projects'>
-        <Questions activeSection={activeSection} />
+      <section id='projects' data-project='questions'>
+        <Questions activeProject={activeProject} />
       </section>
-      <section id='contact'>
+      <section id='contact' data-project='none'>
         <Contact activeSection={activeSection} />
       </section>
       <Footer darkMode={darkMode} />
