@@ -1,5 +1,6 @@
 import React from 'react';
 import headshotCircle from '/src/assets/about/headshot-circle.png';
+import cityBokeh from '/src/assets/backgrounds/city-bokeh.jpg';
 
 const About = ({ activeSection, darkMode }) => {
   const blueStyle = {
@@ -9,6 +10,9 @@ const About = ({ activeSection, darkMode }) => {
   return (
     <>
       <div className='page-container'>
+        <div className='page-img-container'>
+          <img src={cityBokeh} alt='background img' className='page-img' />
+        </div>
         <h1 className='title-name'>About Me</h1>
         <hr className='page-break-blue' style={blueStyle} />
         <div className='about-content'>

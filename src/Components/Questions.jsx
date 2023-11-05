@@ -1,10 +1,16 @@
-import React from "react";
+import React from 'react';
 
-const Questions = () => {
+const Questions = ({ activeProject }) => {
+  const blueStyle = {
+    width: activeProject === 'questions' ? '50px' : '200px',
+    opacity: activeProject === 'questions' ? '100%' : '0%',
+  };
+
   return (
     <>
       <div className='page-container'>
-        <div className='project-name'>Questions!</div>
+        <div className='title-name'>Questions!</div>
+        <hr className='page-break-blue' style={blueStyle} />
         <div className='gap' />
         <div className='project-columns'>
           <div className='project-info'>

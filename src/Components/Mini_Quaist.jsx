@@ -1,10 +1,16 @@
-import React from "react";
+import React from 'react';
 
-const MiniQuaist = () => {
+const MiniQuaist = ({ activeProject }) => {
+  const blueStyle = {
+    width: activeProject === 'miniQuaist' ? '50px' : '200px',
+    opacity: activeProject === 'miniQuaist' ? '100%' : '0%',
+  };
+
   return (
     <>
       <div className='page-container'>
-        <div className='project-name'>Mini Quaist</div>
+        <div className='title-name'>Mini Quaist</div>
+        <hr className='page-break-blue' style={blueStyle} />
         <div className='gap' />
         <div className='project-columns'>
           <div className='project-info'>
