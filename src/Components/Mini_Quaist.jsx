@@ -1,4 +1,5 @@
 import React from 'react';
+import villageMap from '/src/assets/backgrounds/village-map.png';
 
 const MiniQuaist = ({ activeProject }) => {
   const blueStyle = {
@@ -9,6 +10,9 @@ const MiniQuaist = ({ activeProject }) => {
   return (
     <>
       <div className='page-container'>
+        <div className='page-img-container'>
+          <img src={villageMap} alt='background img' className='page-img' />
+        </div>
         <div className='title-name'>Mini Quaist</div>
         <hr className='page-break-blue' style={blueStyle} />
         <div className='gap' />

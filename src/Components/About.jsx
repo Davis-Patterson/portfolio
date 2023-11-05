@@ -1,6 +1,10 @@
 import React from 'react';
 import headshotCircle from '/src/assets/about/headshot-circle.png';
 import cityBokeh from '/src/assets/backgrounds/city-bokeh.jpg';
+import linkedinLogo from '/src/assets/footer/linkedin-logo.svg';
+import githubLogo from '/src/assets/footer/github-logo.svg';
+import linkedinLogoWhite from '/src/assets/nav/linkedin-logo.svg';
+import githubLogoWhite from '/src/assets/nav/github-logo.svg';
 
 const About = ({ activeSection, darkMode }) => {
   const blueStyle = {
@@ -40,18 +44,44 @@ const About = ({ activeSection, darkMode }) => {
             {/* <p className='about-description'>
               Thank you for your consideration!
             </p> */}
-            <div className='skills-container'>
-              <p className='skills-title'>My Skills:</p>
-              <div className='skills-list'>
-                <p className='skill'>React</p>
-                <p className='skill'>JavaScript</p>
-                <p className='skill'>HTML</p>
-                <p className='skill'>CSS</p>
-                <p className='skill'>Python</p>
-                <p className='skill'>Django</p>
-                <p className='skill'>GIT</p>
-                <p className='skill'>GitHub</p>
-                <p className='skill'>Terminal</p>
+            <div className='extra-info'>
+              <div className='skills-container'>
+                <p className='skills-title'>My Skills:</p>
+                <div className='skills-list'>
+                  <p className='skill'>React</p>
+                  <p className='skill'>JavaScript</p>
+                  <p className='skill'>HTML</p>
+                  <p className='skill'>CSS</p>
+                  <p className='skill'>Python</p>
+                  <p className='skill'>Django</p>
+                  <p className='skill'>GIT</p>
+                  <p className='skill'>GitHub</p>
+                </div>
+              </div>
+              <div className='socials-container'>
+                <p className='skills-title'>My Socials:</p>
+                <div className='about-socials'>
+                  <a
+                    href='https://www.linkedin.com/in/davispatterson/'
+                    className='about-link'
+                  >
+                    <img
+                      src={darkMode ? linkedinLogoWhite : linkedinLogo}
+                      alt='linkedin logo'
+                      className='about-link-logo'
+                    />
+                  </a>
+                  <a
+                    href='https://github.com/Davis-Patterson'
+                    className='about-link'
+                  >
+                    <img
+                      src={darkMode ? githubLogoWhite : githubLogo}
+                      alt='github logo'
+                      className='about-link-logo'
+                    />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
