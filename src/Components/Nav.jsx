@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
-import headshotIcon from "/src/assets/nav/headshot-icon.png";
+import headshotIcon from "/src/assets/nav/headshot-icon-zoom.png";
 import linkedinLogo from "/src/assets/nav/linkedin-logo.svg";
 import githubLogo from "/src/assets/nav/github-logo.svg";
 import { styled } from "@mui/system";

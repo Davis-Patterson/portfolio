@@ -1,0 +1,66 @@
+import React from 'react';
+import { HashLink } from 'react-router-hash-link';
+import linkedinLogo from '/src/assets/footer/linkedin-logo.svg';
+import githubLogo from '/src/assets/footer/github-logo.svg';
+import linkedinLogoWhite from '/src/assets/nav/linkedin-logo.svg';
+import githubLogoWhite from '/src/assets/nav/github-logo.svg';
+import geometricTexture from '/src/assets/backgrounds/geometric-texture.jpg';
+
+const Footer = ({ darkMode }) => {
+  return (
+    <>
+      <div className='footer-container'>
+        {/* <div className='page-img-container'>
+          <img
+            src={geometricTexture}
+            alt='background img'
+            className='page-img'
+          />
+        </div> */}
+        <div className='footer-content'>
+          <div className='attribution'>
+            <h1 className='footer-name'>DAVIS PATTERSON</h1>
+            <h1 className='footer-subtext'>
+              Dedicated and enthusiastic software developer with a passion for
+              coding and an eagerness to contribute to team projects.
+            </h1>
+          </div>
+          <div className='social-container'>
+            <h1 className='socials-name'>SOCIALS</h1>
+            <div className='socials'>
+              <a
+                href='https://www.linkedin.com/in/davispatterson/'
+                className='nav-link'
+              >
+                <img
+                  src={darkMode ? linkedinLogoWhite : linkedinLogo}
+                  alt='linkedin logo'
+                  className='link-logo'
+                />
+              </a>
+              <a href='https://github.com/Davis-Patterson' className='nav-link'>
+                <img
+                  src={darkMode ? githubLogoWhite : githubLogo}
+                  alt='github logo'
+                  className='link-logo'
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className='footer-footer'>
+          <p className='footer-footer-text'>
+            © Copyright 2023. Made by{' '}
+            <HashLink smooth to='/#home' className='footer-text-link'>
+              Davis Patterson
+            </HashLink>
+            .
+          </p>
+        </div>
+        <div className='gap' />
+      </div>
+    </>
+  );
+};
+
+export default Footer;

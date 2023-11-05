@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from "react";
-import Nav from "./Components/Nav";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import MiniQuaist from "./Components/Mini_Quaist";
-import Questions from "./Components/Questions";
-import Contact from "./Components/Contact";
-import "./App.css";
+import React, { useState, useEffect } from 'react';
+import Nav from './Components/Nav';
+import Home from './Components/Home';
+import About from './Components/About';
+import MiniQuaist from './Components/Mini_Quaist';
+import Questions from './Components/Questions';
+import Contact from './Components/Contact';
+import Footer from './Components/Footer';
+import './App.css';
+import { dark } from '@mui/material/styles/createPalette';
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
   const [darkMode, setDarkMode] = useState(false);
 
-  const sections = ["home", "about", "projects", "contact"];
+  const sections = ['home', 'about', 'projects', 'contact'];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -29,7 +31,7 @@ function App() {
       }
     );
 
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll('section');
     sections.forEach((section) => {
       observer.observe(section);
     });
@@ -55,17 +57,18 @@ function App() {
         <Home />
       </section>
       <section id='about'>
-        <About />
+        <About activeSection={activeSection} darkMode={darkMode} />
       </section>
       <section id='projects'>
-        <MiniQuaist />
+        <MiniQuaist activeSection={activeSection} />
       </section>
       <section id='projects'>
-        <Questions />
+        <Questions activeSection={activeSection} />
       </section>
       <section id='contact'>
-        <Contact />
+        <Contact activeSection={activeSection} />
       </section>
+      <Footer darkMode={darkMode} />
     </>
   );
 }
