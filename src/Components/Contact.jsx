@@ -56,6 +56,8 @@ const Contact = ({ activeSection, darkMode }) => {
           <p className='skills-title'>My Socials:</p>
           <div className='contact-socials'>
             <a
+              target='_blank'
+              rel='noopener noreferrer'
               href='https://www.linkedin.com/in/davispatterson/'
               className='about-link'
             >
@@ -65,7 +67,12 @@ const Contact = ({ activeSection, darkMode }) => {
                 className='about-link-logo'
               />
             </a>
-            <a href='https://github.com/Davis-Patterson' className='about-link'>
+            <a
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/Davis-Patterson'
+              className='about-link'
+            >
               <img
                 src={darkMode ? githubLogoWhite : githubLogo}
                 alt='github logo'

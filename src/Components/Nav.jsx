@@ -37,6 +37,8 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
             </HashLink>
             <div className='home-button-adjacent'>
               <a
+                target='_blank'
+                rel='noopener noreferrer'
                 href='https://www.linkedin.com/in/davispatterson/'
                 className='nav-link'
               >
@@ -46,7 +48,12 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
                   className='link-logo'
                 />
               </a>
-              <a href='https://github.com/Davis-Patterson' className='nav-link'>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://github.com/Davis-Patterson'
+                className='nav-link'
+              >
                 <img src={githubLogo} alt='github logo' className='link-logo' />
               </a>
               <MaterialUISwitch

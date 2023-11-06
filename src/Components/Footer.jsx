@@ -29,6 +29,8 @@ const Footer = ({ darkMode }) => {
             <h1 className='socials-name'>SOCIALS</h1>
             <div className='socials'>
               <a
+                target='_blank'
+                rel='noopener noreferrer'
                 href='https://www.linkedin.com/in/davispatterson/'
                 className='nav-link'
               >
@@ -38,7 +40,12 @@ const Footer = ({ darkMode }) => {
                   className='link-logo'
                 />
               </a>
-              <a href='https://github.com/Davis-Patterson' className='nav-link'>
+              <a
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://github.com/Davis-Patterson'
+                className='nav-link'
+              >
                 <img
                   src={darkMode ? githubLogoWhite : githubLogo}
                   alt='github logo'
