@@ -11,11 +11,21 @@ const About = ({ activeSection, darkMode }) => {
     width: activeSection === 'about' ? '50px' : '200px',
     opacity: activeSection === 'about' ? '100%' : '0%',
   };
+
+  const pageStyle = {
+    opacity: darkMode ? '15%' : '25%',
+  };
+
   return (
     <>
       <div className='page-container'>
         <div className='page-img-container'>
-          <img src={cityBokeh} alt='background img' className='page-img' />
+          <img
+            src={cityBokeh}
+            alt='background img'
+            className='page-img'
+            style={pageStyle}
+          />
         </div>
         <h1 className='title-name'>About Me</h1>
         <hr className='page-break-blue' style={blueStyle} />
@@ -93,7 +103,6 @@ const About = ({ activeSection, darkMode }) => {
             />
           </div>
         </div>
-        <div className='gap' />
       </div>
     </>
   );

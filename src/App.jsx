@@ -60,13 +60,13 @@ function App() {
         <About activeSection={activeSection} darkMode={darkMode} />
       </section>
       <section id='projects' data-project='miniQuaist'>
-        <MiniQuaist activeProject={activeProject} />
+        <MiniQuaist activeProject={activeProject} darkMode={darkMode} />
       </section>
       <section id='projects' data-project='questions'>
-        <Questions activeProject={activeProject} />
+        <Questions activeProject={activeProject} darkMode={darkMode} />
       </section>
       <section id='contact' data-project='none'>
-        <Contact activeSection={activeSection} />
+        <Contact activeSection={activeSection} darkMode={darkMode} />
       </section>
       <Footer darkMode={darkMode} />
     </>

@@ -1,40 +1,116 @@
-import React from 'react';
+import React, { useState } from 'react';
 import villageMap from '/src/assets/backgrounds/village-map.png';
+import Gif1 from '/src/assets/mini-quaist/clip1.gif';
+import Img1 from '/src/assets/mini-quaist/clip1.png';
+import Gif2 from '/src/assets/mini-quaist/clip2.gif';
+import Img2 from '/src/assets/mini-quaist/clip2.png';
+import Gif3 from '/src/assets/mini-quaist/clip3.gif';
+import Img3 from '/src/assets/mini-quaist/clip3.png';
+import Gif4 from '/src/assets/mini-quaist/clip4.gif';
+import Img4 from '/src/assets/mini-quaist/clip4.png';
+import Gif5 from '/src/assets/mini-quaist/clip5.gif';
+import Img5 from '/src/assets/mini-quaist/clip5.png';
+import Gif6 from '/src/assets/mini-quaist/clip6.gif';
+import Img6 from '/src/assets/mini-quaist/clip6.png';
+import descriptions from '/src/Util/MiniQuaist.json';
+import Progress from './Progress';
 
-const MiniQuaist = ({ activeProject }) => {
+const MiniQuaist = ({ activeProject, darkMode }) => {
+  const [activeClip, setActiveClip] = useState(5);
+  const [isPaused, setIsPaused] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  const [fade, setFade] = useState('in');
+
+  const gifs = [Gif1, Gif2, Gif3, Gif4, Gif5, Gif6];
+  const imgs = [Img1, Img2, Img3, Img4, Img5, Img6];
+
+  const initialIndexValue = 1;
+  const lastClip = gifs.length;
+
   const blueStyle = {
     width: activeProject === 'miniQuaist' ? '50px' : '200px',
     opacity: activeProject === 'miniQuaist' ? '100%' : '0%',
+  };
+
+  const pageStyle = {
+    opacity: darkMode ? '15%' : '25%',
+  };
+
+  const activeGifSrc = gifs[(activeClip - 1) % gifs.length];
+
+  const activeDescription = descriptions.find(
+    (desc) => desc.id === activeClip
+  )?.desc;
+
+  const handleImgClick = (index) => {
+    setActiveClip(index + 1);
+  };
+
+  const autoProg = () => {
+    if (!isPaused) {
+      setFade('out');
+      setProgress(0);
+      setTimeout(() => {
+        if (activeClip < lastClip) {
+          setActiveClip((index) => index + 1);
+          console.log('activeClip: ', activeClip);
+        } else {
+          setActiveClip(initialIndexValue);
+        }
+        setFade('in');
+      }, 200);
+    }
   };
 
   return (
     <>
       <div className='page-container'>
         <div className='page-img-container'>
-          <img src={villageMap} alt='background img' className='page-img' />
+          <img
+            src={villageMap}
+            alt='background img'
+            className='page-img'
+            style={pageStyle}
+          />
         </div>
         <div className='title-name'>Mini Quaist</div>
-        <hr className='page-break-blue' style={blueStyle} />
-        <div className='gap' />
+        <hr className='mini-break-blue' style={blueStyle} />
         <div className='project-columns'>
           <div className='project-info'>
-            <div className='list-items'>
-              <p className='list-item'>
-                Top-down RPG video game built in React, our collaborative final
-                project.
-              </p>
-              <p className='list-item'>
-                Incorporated AI-driven NPC dialogues and image rendering.
-              </p>
-              <p className='list-item'>
-                Collaborated remotely with a team, using agile practices.
-              </p>
-              <p className='list-item'>
-                Took a lead role in developing the game mechanics, the UI/UX,
-                and mentoring fellow team members.
+            <div className='desc-box'>
+              <p className='mini-desc'>
+                Top-down RPG video game built in React. Incorporated AI-driven
+                NPC dialogues and image rendering. Collaborated remotely with a
+                team, using agile practices. Took a lead role in developing the
+                game mechanics, the UI/UX, and mentoring fellow team members.
               </p>
             </div>
           </div>
+        </div>
+        <div className='slideshow-container'>
+          <img src={activeGifSrc} alt='rotating gifs' className='slide-gifs' />
+          <p className='slide-desc'>{activeDescription}</p>
+          <div className='slide-imgs'>
+            {imgs.map((imgSrc, index) => (
+              <img
+                key={imgSrc} // Ideally, use a unique and consistent key instead of the src
+                src={imgSrc}
+                alt={`Slide Img ${index + 1}`}
+                className={`slide-img ${
+                  activeClip === index + 1 ? 'current' : ''
+                }`}
+                onClick={() => handleImgClick(index)}
+              />
+            ))}
+          </div>
+          <Progress
+            isPaused={isPaused}
+            setIsPaused={setIsPaused}
+            progress={progress}
+            setProgress={setProgress}
+            autoProg={autoProg}
+          />
         </div>
       </div>
     </>
