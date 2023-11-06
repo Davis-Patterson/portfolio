@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import geometricTexture from '/src/assets/backgrounds/geometric-texture.jpg';
+import linkedinLogo from '/src/assets/footer/linkedin-logo.svg';
+import githubLogo from '/src/assets/footer/github-logo.svg';
+import linkedinLogoWhite from '/src/assets/nav/linkedin-logo.svg';
+import githubLogoWhite from '/src/assets/nav/github-logo.svg';
 
 const Contact = ({ activeSection, darkMode }) => {
   const [form, setForm] = useState({
@@ -47,9 +51,32 @@ const Contact = ({ activeSection, darkMode }) => {
           />
         </div>
         <h1 className='title-name'>Contact Me</h1>
-        <hr className='page-break-blue' style={blueStyle} />
+        <hr className='contact-page-break' style={blueStyle} />
+        <div className='contact-socials-container'>
+          <p className='skills-title'>My Socials:</p>
+          <div className='contact-socials'>
+            <a
+              href='https://www.linkedin.com/in/davispatterson/'
+              className='about-link'
+            >
+              <img
+                src={darkMode ? linkedinLogoWhite : linkedinLogo}
+                alt='linkedin logo'
+                className='about-link-logo'
+              />
+            </a>
+            <a href='https://github.com/Davis-Patterson' className='about-link'>
+              <img
+                src={darkMode ? githubLogoWhite : githubLogo}
+                alt='github logo'
+                className='about-link-logo'
+              />
+            </a>
+          </div>
+        </div>
         <div className='contact-content'>
           <form onSubmit={handleSubmit} className='contact-form'>
+            <p className='email-form-title'>Send me an email:</p>
             <input
               type='text'
               name='name'

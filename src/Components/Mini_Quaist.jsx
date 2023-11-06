@@ -20,6 +20,8 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
 
+  const [zoomed, setZoomed] = useState(true);
+
   const [fade, setFade] = useState('in');
 
   const gifs = [Gif1, Gif2, Gif3, Gif4, Gif5, Gif6];
@@ -63,6 +65,34 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
     }
   };
 
+  const handleExit = () => {
+    setZoomed(false);
+  };
+
+  const handleZoom = () => {
+    setZoomed(!zoomed);
+  };
+
+  const handlePrev = () => {
+    setActiveClip((prevActiveClip) => {
+      if (prevActiveClip === 1) {
+        return lastClip;
+      } else {
+        return prevActiveClip - 1;
+      }
+    });
+  };
+
+  const handleNext = () => {
+    setActiveClip((prevActiveClip) => {
+      if (prevActiveClip === lastClip) {
+        return 1;
+      } else {
+        return prevActiveClip + 1;
+      }
+    });
+  };
+
   return (
     <>
       <div className='page-container'>
@@ -74,44 +104,76 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
             style={pageStyle}
           />
         </div>
-        <div className='title-name'>Mini Quaist</div>
-        <hr className='mini-break-blue' style={blueStyle} />
-        <div className='project-columns'>
-          <div className='project-info'>
-            <div className='desc-box'>
-              <p className='mini-desc'>
-                Top-down RPG video game built in React. Incorporated AI-driven
-                NPC dialogues and image rendering. Collaborated remotely with a
-                team, using agile practices. Took a lead role in developing the
-                game mechanics, the UI/UX, and mentoring fellow team members.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className='slideshow-container'>
-          <img src={activeGifSrc} alt='rotating gifs' className='slide-gifs' />
-          <p className='slide-desc'>{activeDescription}</p>
-          <div className='slide-imgs'>
-            {imgs.map((imgSrc, index) => (
+        {zoomed && (
+          <>
+            <div className='big-slideshow-container'>
+              <div className='exit-button' onClick={handleExit}>
+                X
+              </div>
               <img
-                key={imgSrc} // Ideally, use a unique and consistent key instead of the src
-                src={imgSrc}
-                alt={`Slide Img ${index + 1}`}
-                className={`slide-img ${
-                  activeClip === index + 1 ? 'current' : ''
-                }`}
-                onClick={() => handleImgClick(index)}
+                src={activeGifSrc}
+                alt='rotating gifs'
+                className='big-slide-gifs'
+                onClick={handleZoom}
               />
-            ))}
-          </div>
-          <Progress
-            isPaused={isPaused}
-            setIsPaused={setIsPaused}
-            progress={progress}
-            setProgress={setProgress}
-            autoProg={autoProg}
-          />
-        </div>
+              <p className='slide-desc'>{activeDescription}</p>
+              <div className='prev-button' onClick={handlePrev}>
+                {'◄'}
+              </div>
+              <div className='next-button' onClick={handleNext}>
+                {'►'}
+              </div>
+            </div>
+          </>
+        )}
+        {!zoomed && (
+          <>
+            <div className='title-name'>Mini Quaist</div>
+            <hr className='mini-break-blue' style={blueStyle} />
+            <div className='project-columns'>
+              <div className='project-info'>
+                <div className='desc-box'>
+                  <p className='mini-desc'>
+                    Top-down RPG video game built in React. Incorporated
+                    AI-driven NPC dialogues and image rendering. Collaborated
+                    remotely with a team, using agile practices. Took a lead
+                    role in developing the game mechanics, the UI/UX, and
+                    mentoring fellow team members.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className='slideshow-container'>
+              <img
+                src={activeGifSrc}
+                alt='rotating gifs'
+                className='slide-gifs'
+                onClick={handleZoom}
+              />
+              <p className='slide-desc'>{activeDescription}</p>
+              <div className='slide-imgs'>
+                {imgs.map((imgSrc, index) => (
+                  <img
+                    key={imgSrc} // Ideally, use a unique and consistent key instead of the src
+                    src={imgSrc}
+                    alt={`Slide Img ${index + 1}`}
+                    className={`slide-img ${
+                      activeClip === index + 1 ? 'current' : ''
+                    }`}
+                    onClick={() => handleImgClick(index)}
+                  />
+                ))}
+              </div>
+              <Progress
+                isPaused={isPaused}
+                setIsPaused={setIsPaused}
+                progress={progress}
+                setProgress={setProgress}
+                autoProg={autoProg}
+              />
+            </div>
+          </>
+        )}
       </div>
     </>
   );

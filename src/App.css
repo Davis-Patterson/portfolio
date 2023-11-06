@@ -27,6 +27,7 @@
   --clr-back: #9e9e9e;
   --clr-text: #6b6b6b;
   --clr-white: #fff;
+  --clr-black: #000000;
   --clr-nav: #505050;
   --clr-screen: #0000008a;
 }
@@ -41,6 +42,7 @@
   --clr-back: #9e9e9e;
   --clr-text: #c4c4c4;
   --clr-white: #fff;
+  --clr-black: #000000;
   --clr-nav: #424242;
   --clr-screen: #00000077;
 }
@@ -599,6 +601,21 @@ html {
 
 /* MiniQuaist styles */
 
+.big-slideshow-container {
+  width: 95%;
+  max-width: 1292px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  background-color: var(--clr-screen);
+  padding: 25px 0px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  z-index: 50;
+  position: relative;
+}
+
 .slideshow-container {
   width: 70%;
   max-width: 1150px;
@@ -612,6 +629,24 @@ html {
   place-items: center;
   z-index: 50;
   position: relative;
+}
+
+.exit-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: 1px solid var(--clr-black);
+  padding: 6px 8px;
+  color: var(--clr-white);
+  background-color: var(--clr-screen);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+}
+.exit-button:active {
+  transform: scale(90%);
 }
 
 .mini-break-blue {
@@ -642,9 +677,44 @@ html {
   z-index: 20;
 }
 
+.big-slide-gifs {
+  width: 85%;
+  border: 2px solid #1a1a1a;
+  cursor: zoom-out;
+}
+
 .slide-gifs {
   width: 70%;
   border: 2px solid #1a1a1a;
+  cursor: zoom-in;
+}
+
+.prev-button {
+  left: 25px;
+}
+
+.next-button {
+  right: 25px;
+}
+.prev-button, .next-button {
+  position: absolute;
+  bottom: 15px;
+  padding: 6px 4px;
+  color: var(--clr-white);
+  font-family: 'Montserrat', sans-serif;
+  transform: scaleY(1.5) scaleX(.75);
+  font-size: 2em;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+}
+.prev-button:hover, .next-button:hover {
+  transform: scaleY(1.5) scaleX(.75) scale(1.2);
+  color: var(--clr-accent-light);
+}
+.prev-button:active, .next-button:active {
+  transform: scaleY(1.5) scaleX(.75) scale(.95);
+  color: var(--clr-accent)
 }
 
 .slide-desc {
@@ -745,11 +815,47 @@ html {
   z-index: 50;
 }
 
+.contact-page-break {
+  border: none;
+  height: 2px;
+  background-color: var(--clr-accent);
+  margin: 20px 0px 30px 0px;
+  height: 10px;
+  border-radius: 25px;
+  transition: 0.8s;
+}
+
+.contact-socials-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 0px 0px 30px 0px;
+}
+
+.contact-socials {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 5px 0px 0px 0px;
+}
+
 .contact-form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.email-form-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6em;
+  font-weight: 200;
+  line-height: .8;
+  color: var(--clr-white);
+  transform: scaleY(95%);
+  margin: 0px 0px 30px 0px;
 }
 
 .name-input, .email-input {
