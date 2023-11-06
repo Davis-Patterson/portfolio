@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import villageMap from '/src/assets/backgrounds/village-map.png';
 import Gif1 from '/src/assets/mini-quaist/clip1.gif';
+import Gif1Comp from '/src/assets/mini-quaist/clip1-comp.gif';
 import Img1 from '/src/assets/mini-quaist/clip1.png';
 import Gif2 from '/src/assets/mini-quaist/clip2.gif';
+import Gif2Comp from '/src/assets/mini-quaist/clip2-comp.gif';
 import Img2 from '/src/assets/mini-quaist/clip2.png';
 import Gif3 from '/src/assets/mini-quaist/clip3.gif';
+import Gif3Comp from '/src/assets/mini-quaist/clip3-comp.gif';
 import Img3 from '/src/assets/mini-quaist/clip3.png';
 import Gif4 from '/src/assets/mini-quaist/clip4.gif';
+import Gif4Comp from '/src/assets/mini-quaist/clip4-comp.gif';
 import Img4 from '/src/assets/mini-quaist/clip4.png';
 import Gif5 from '/src/assets/mini-quaist/clip5.gif';
+import Gif5Comp from '/src/assets/mini-quaist/clip5-comp.gif';
 import Img5 from '/src/assets/mini-quaist/clip5.png';
 import Gif6 from '/src/assets/mini-quaist/clip6.gif';
+import Gif6Comp from '/src/assets/mini-quaist/clip6-comp.gif';
 import Img6 from '/src/assets/mini-quaist/clip6.png';
 import descriptions from '/src/Util/MiniQuaist.json';
 import Progress from './Progress';
@@ -25,6 +31,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
   const [fade, setFade] = useState('in');
 
   const gifs = [Gif1, Gif2, Gif3, Gif4, Gif5, Gif6];
+  const gifsComp = [Gif1Comp, Gif2Comp, Gif3Comp, Gif4Comp, Gif5Comp, Gif6Comp];
   const imgs = [Img1, Img2, Img3, Img4, Img5, Img6];
 
   const initialIndexValue = 1;
@@ -45,6 +52,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
 
   const handleImgClick = (index) => {
     setActiveClip(index + 1);
+    setProgress(0);
   };
 
   const autoProg = () => {
@@ -178,7 +186,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
               </div>
             </div>
             <div className='slideshow-container'>
-              {gifs.map(
+              {gifsComp.map(
                 (gifSrc, index) =>
                   activeClip === index + 1 && (
                     <img
