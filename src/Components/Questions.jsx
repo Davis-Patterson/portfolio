@@ -1,14 +1,27 @@
 import React from 'react';
+import geometricTexture from '/src/assets/backgrounds/geometric-texture.jpg';
 
-const Questions = ({ activeProject }) => {
+const Questions = ({ activeProject, darkMode }) => {
   const blueStyle = {
     width: activeProject === 'questions' ? '50px' : '200px',
     opacity: activeProject === 'questions' ? '100%' : '0%',
   };
 
+  const pageStyle = {
+    opacity: darkMode ? '15%' : '25%',
+  };
+
   return (
     <>
       <div className='page-container'>
+        <div className='page-img-container'>
+          <img
+            src={null}
+            alt='background img'
+            className='page-img'
+            style={pageStyle}
+          />
+        </div>
         <div className='title-name'>Questions!</div>
         <hr className='page-break-blue' style={blueStyle} />
         <div className='gap' />

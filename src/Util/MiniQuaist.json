@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "desc": "Tooltips provide hints to the player for both gameplay information and story progression."
+  },
+  {
+    "id": 2,
+    "desc": "Dynamic checkpoints allow paths to be blocked until the player has met some gameplay criteria."
+  },
+  {
+    "id": 3,
+    "desc": "NPCs (non-player characters) can be interacted with on the map to advance the story."
+  },
+  {
+    "id": 4,
+    "desc": "NPC responses are AI driven and the images are AI rendered."
+  },
+  {
+    "id": 5,
+    "desc": "NPC dialogues sometimes include Ability Checks, a dice roll based on character stats, to determine outcomes."
+  },
+  {
+    "id": 6,
+    "desc": "Unfriendly NPCs might require combat to get passed, especially if an Ability Check was failed."
+  }
+]

@@ -10,6 +10,10 @@ const Home = ({ activeSection, darkMode }) => {
     opacity: activeSection === 'home' ? '100%' : '0%',
   };
 
+  const pageStyle = {
+    opacity: darkMode ? '15%' : '25%',
+  };
+
   return (
     <>
       <div className='home-container'>
@@ -18,6 +22,7 @@ const Home = ({ activeSection, darkMode }) => {
             src={geometricTexture}
             alt='background img'
             className='page-img'
+            style={pageStyle}
           />
         </div>
         <h1 className='hello-subtext'>Hello, my name is</h1>
@@ -37,11 +42,13 @@ const Home = ({ activeSection, darkMode }) => {
           <div className='home-projects-button'>Contact</div>
         </HashLink>
         <div className='scroll-icon-container'>
-          <img
-            src={darkMode ? scrollDark : scrollLight}
-            alt='scroll icon'
-            className='scroll-icon'
-          />
+          <HashLink smooth to='/#about' className='scroll-link'>
+            <img
+              src={darkMode ? scrollDark : scrollLight}
+              alt='scroll icon'
+              className='scroll-icon'
+            />
+          </HashLink>
         </div>
         <div className='gap' />
       </div>
