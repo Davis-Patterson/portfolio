@@ -39,8 +39,6 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
     opacity: darkMode ? '15%' : '25%',
   };
 
-  const activeGifSrc = gifs[(activeClip - 1) % gifs.length];
-
   const activeDescription = descriptions.find(
     (desc) => desc.id === activeClip
   )?.desc;
@@ -164,12 +162,18 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
               </div>
             </div>
             <div className='slideshow-container'>
-              <img
-                src={activeGifSrc}
-                alt='rotating gifs'
-                className='slide-gifs'
-                onClick={handleZoom}
-              />
+              {gifs.map(
+                (gifSrc, index) =>
+                  activeClip === index + 1 && (
+                    <img
+                      key={index}
+                      src={gifSrc}
+                      alt={`Rotating GIF ${index + 1}`}
+                      className='slide-gifs'
+                      onClick={handleZoom}
+                    />
+                  )
+              )}
               <p className='slide-desc'>{activeDescription}</p>
               <div className='slide-imgs'>
                 {imgs.map((imgSrc, index) => (
