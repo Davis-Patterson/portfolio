@@ -4,12 +4,7 @@ import pauseIcon from '/src/assets/mini-quaist/pause-icon.svg';
 import ProgressBar from 'react-animated-progress-bar';
 import PropTypes from 'prop-types';
 
-const Progress = ({
-  isPaused,
-  setIsPaused,
-  progress,
-}) => {
-
+const Progress = ({ isPaused, setIsPaused, progress }) => {
   const validProgress =
     Number.isFinite(progress) && progress >= 0 && progress <= 100
       ? progress
@@ -42,7 +37,10 @@ const Progress = ({
           src={isPaused ? playIcon : pauseIcon}
           alt='play/pause icon'
           className='pause-icon'
-          style={{ right: isPaused ? '4.5px' : '5px' }}
+          style={{
+            right: isPaused ? '3px' : '5px',
+            bottom: isPaused ? '5px' : '5.5px',
+          }}
         />
       </div>
     </>
