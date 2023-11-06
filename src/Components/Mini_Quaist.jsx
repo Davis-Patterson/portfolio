@@ -165,7 +165,14 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
                     remotely with a team, using agile practices. Took a lead
                     role in developing the game mechanics, the UI/UX, and
                     mentoring fellow team members. You can play Mini Quaist{' '}
-                    <a href='https://mini-quaist.netlify.app/home'>here</a>.
+                    <a
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      href='https://mini-quaist.netlify.app/home'
+                    >
+                      here
+                    </a>
+                    .
                   </p>
                 </div>
               </div>
