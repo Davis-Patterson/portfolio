@@ -19,7 +19,7 @@
 
   /* 'lightMode' */
   --clr-light: #ffffff;
-  --clr-dark: #505050;
+  --clr-dark: #292929;
   --clr-break: #d6d7db;
   --clr-accent: #20bcfa;
   --clr-accent-light: #68dcff;
@@ -428,7 +428,7 @@ html {
 }
 
 .project-info {
-  width: 50%;
+  width: 60%;
 }
 
 .project-imgs {

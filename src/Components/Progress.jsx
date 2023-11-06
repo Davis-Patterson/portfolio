@@ -8,28 +8,7 @@ const Progress = ({
   isPaused,
   setIsPaused,
   progress,
-  setProgress,
-  autoProg,
 }) => {
-  useEffect(() => {
-    const progressTimer = setInterval(() => {
-      setProgress((prevProgress) => {
-        if (!isPaused && prevProgress < 100) {
-          return prevProgress + 1;
-        } else {
-          return prevProgress;
-        }
-      });
-    }, 100);
-
-    if (progress === 100 && !isPaused) {
-      autoProg();
-    }
-
-    return () => {
-      clearInterval(progressTimer);
-    };
-  }, [isPaused, autoProg]);
 
   const validProgress =
     Number.isFinite(progress) && progress >= 0 && progress <= 100
