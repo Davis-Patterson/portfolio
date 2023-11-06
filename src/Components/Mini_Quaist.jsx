@@ -82,12 +82,13 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
     };
   }, [isPaused, autoProg]);
 
-  const handleExit = () => {
-    setZoomed(false);
+  const handleZoomIn = () => {
+    setZoomed(true);
+    setIsPaused(true);
   };
-
-  const handleZoom = () => {
-    setZoomed(!zoomed);
+  const handleZoomOut = () => {
+    setZoomed(false);
+    setIsPaused(false);
   };
 
   const handlePrev = () => {
@@ -98,6 +99,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
         return prevActiveClip - 1;
       }
     });
+    setProgress(0);
   };
 
   const handleNext = () => {
@@ -108,6 +110,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
         return prevActiveClip + 1;
       }
     });
+    setProgress(0);
   };
 
   return (
@@ -124,7 +127,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
         {zoomed && (
           <>
             <div className='big-slideshow-container'>
-              <div className='exit-button' onClick={handleExit}>
+              <div className='exit-button' onClick={handleZoomOut}>
                 X
               </div>
               {gifs.map(
@@ -135,7 +138,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
                       src={gifSrc}
                       alt={`Rotating GIF ${index + 1}`}
                       className='big-slide-gifs'
-                      onClick={handleZoom}
+                      onClick={handleZoomOut}
                     />
                   )
               )}
@@ -176,7 +179,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
                       src={gifSrc}
                       alt={`Rotating GIF ${index + 1}`}
                       className='slide-gifs'
-                      onClick={handleZoom}
+                      onClick={handleZoomIn}
                     />
                   )
               )}
