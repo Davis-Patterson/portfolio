@@ -16,7 +16,7 @@ import descriptions from '/src/Util/MiniQuaist.json';
 import Progress from './Progress';
 
 const MiniQuaist = ({ activeProject, darkMode }) => {
-  const [activeClip, setActiveClip] = useState(5);
+  const [activeClip, setActiveClip] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
 
