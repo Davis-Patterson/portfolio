@@ -38,7 +38,7 @@
   --clr-accent-light: #68dcff;
   --clr-accent-dark: #2091fa;
   --clr-back: #9e9e9e;
-  --clr-text: #8d8d8d;
+  --clr-text: #c4c4c4;
   --clr-white: #fff;
   --clr-nav: #424242;
 }
@@ -258,7 +258,7 @@ html {
   line-height: .8;
   color: var(--clr-dark);
   transform: scaleY(90%);
-  margin: 50px 0px 25px 0px;
+  margin: 60px 0px 20px 0px;
 }
 
 .title-name {
@@ -285,10 +285,10 @@ html {
 
 .home-projects-link {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.2em;
+  font-size: 1em;
   color: var(--clr-white);
   cursor: pointer;
-  margin: 0px 0px 0px 0px;
+  margin: 10px 0px 10px 0px;
   text-decoration: none;
   border-radius: 10px;
   z-index: 50;
@@ -310,13 +310,16 @@ html {
   background-color: var(--clr-accent);
   color: var(--clr-white);
   font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 500;
   line-height: .9;
-  padding: 15px 20px;
+  padding: 10px 15px;
   cursor: pointer;
   border-radius: 10px;
   z-index: 50;
+  width: 150px;
+  height: 50px;
+  text-align: center;
 }
 .home-projects-link:hover .home-projects-button {
   border: 1px solid var(--clr-accent-dark);
@@ -326,6 +329,17 @@ html {
 .home-projects-link:active .home-projects-button {
   border: 1px solid var(--clr-accent);
   background-color: var(--clr-accent);
+}
+
+.scroll-icon-container {
+  z-index: 50;
+  position: absolute;
+  bottom: 20px;
+}
+
+.scroll-icon {
+  width: 80px;
+  height: 80px;
 }
 
 .home-container {
@@ -425,7 +439,7 @@ html {
   border: none;
   height: 2px;
   background-color: var(--clr-accent);
-  margin: 20px 0px 100px 0px;
+  margin: 20px 0px 50px 0px;
   height: 10px;
   border-radius: 25px;
   transition: 0.8s;
