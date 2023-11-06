@@ -127,12 +127,18 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
               <div className='exit-button' onClick={handleExit}>
                 X
               </div>
-              <img
-                src={activeGifSrc}
-                alt='rotating gifs'
-                className='big-slide-gifs'
-                onClick={handleZoom}
-              />
+              {gifs.map(
+                (gifSrc, index) =>
+                  activeClip === index + 1 && (
+                    <img
+                      key={index}
+                      src={gifSrc}
+                      alt={`Rotating GIF ${index + 1}`}
+                      className='big-slide-gifs'
+                      onClick={handleZoom}
+                    />
+                  )
+              )}
               <p className='slide-desc'>{activeDescription}</p>
               <div className='prev-button' onClick={handlePrev}>
                 {'◄'}

@@ -602,8 +602,8 @@ html {
 /* MiniQuaist styles */
 
 .big-slideshow-container {
-  width: 95%;
-  max-width: 1292px;
+  width: 98%;
+  max-width: 1358px;
   border: 1px solid #000000;
   border-radius: 15px;
   background-color: var(--clr-screen);
@@ -678,7 +678,7 @@ html {
 }
 
 .big-slide-gifs {
-  width: 85%;
+  width: 95%;
   border: 2px solid #1a1a1a;
   cursor: zoom-out;
 }
@@ -690,15 +690,15 @@ html {
 }
 
 .prev-button {
-  left: 25px;
+  left: 10px;
 }
 
 .next-button {
-  right: 25px;
+  right: 10px;
 }
 .prev-button, .next-button {
   position: absolute;
-  bottom: 15px;
+  bottom: 10px;
   padding: 6px 4px;
   color: var(--clr-white);
   font-family: 'Montserrat', sans-serif;
