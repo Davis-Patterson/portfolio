@@ -54,7 +54,7 @@ function App() {
         setActiveSection={setActiveSection}
       />
       <section id='home' data-project='none'>
-        <Home activeSection={activeSection} />
+        <Home activeSection={activeSection} darkMode={darkMode} />
       </section>
       <section id='about' data-project='none'>
         <About activeSection={activeSection} darkMode={darkMode} />

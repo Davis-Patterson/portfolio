@@ -14,5 +14,5 @@ export default defineConfig({
       utilities: "/src/styles",
     },
   },
-  assetsInclude: ['**/*.png', '**/*.PNG']
+  assetsInclude: ['**/*.png', '**/*.PNG', '**/*.avi']
 });

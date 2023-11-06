@@ -1,8 +1,10 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 import geometricTexture from '/src/assets/backgrounds/geometric-texture.jpg';
+import scrollLight from '/src/assets/home/scroll-light.gif';
+import scrollDark from '/src/assets/home/scroll-dark.gif';
 
-const Home = ({ activeSection }) => {
+const Home = ({ activeSection, darkMode }) => {
   const blueStyle = {
     width: activeSection === 'home' ? '50px' : '200px',
     opacity: activeSection === 'home' ? '100%' : '0%',
@@ -25,9 +27,22 @@ const Home = ({ activeSection }) => {
           coding and an eagerness to contribute to team projects.
         </h1>
         <hr className='page-break-blue' style={blueStyle} />
+        <HashLink smooth to='/#about' className='home-projects-link'>
+          <div className='home-projects-button'>About</div>
+        </HashLink>
         <HashLink smooth to='/#projects' className='home-projects-link'>
           <div className='home-projects-button'>Projects</div>
         </HashLink>
+        <HashLink smooth to='/#contact' className='home-projects-link'>
+          <div className='home-projects-button'>Contact</div>
+        </HashLink>
+        <div className='scroll-icon-container'>
+          <img
+            src={darkMode ? scrollDark : scrollLight}
+            alt='scroll icon'
+            className='scroll-icon'
+          />
+        </div>
         <div className='gap' />
       </div>
     </>
