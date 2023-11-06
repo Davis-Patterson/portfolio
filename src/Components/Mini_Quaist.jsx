@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import villageMap from '/src/assets/backgrounds/village-map.png';
 import Gif1 from '/src/assets/mini-quaist/clip1.gif';
 import Img1 from '/src/assets/mini-quaist/clip1.png';
@@ -56,7 +56,6 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
       setTimeout(() => {
         if (activeClip < lastClip) {
           setActiveClip((index) => index + 1);
-          console.log('activeClip: ', activeClip);
         } else {
           setActiveClip(initialIndexValue);
         }
@@ -64,6 +63,26 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
       }, 200);
     }
   };
+
+  useEffect(() => {
+    const progressTimer = setInterval(() => {
+      setProgress((prevProgress) => {
+        if (!isPaused && prevProgress < 100) {
+          return prevProgress + 1;
+        } else {
+          return prevProgress;
+        }
+      });
+    }, 100);
+
+    if (progress === 100 && !isPaused) {
+      autoProg();
+    }
+
+    return () => {
+      clearInterval(progressTimer);
+    };
+  }, [isPaused, autoProg]);
 
   const handleExit = () => {
     setZoomed(false);
@@ -138,7 +157,8 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
                     AI-driven NPC dialogues and image rendering. Collaborated
                     remotely with a team, using agile practices. Took a lead
                     role in developing the game mechanics, the UI/UX, and
-                    mentoring fellow team members.
+                    mentoring fellow team members. You can play Mini Quaist{' '}
+                    <a href='https://mini-quaist.netlify.app/home'>here</a>.
                   </p>
                 </div>
               </div>
@@ -168,8 +188,6 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
                 isPaused={isPaused}
                 setIsPaused={setIsPaused}
                 progress={progress}
-                setProgress={setProgress}
-                autoProg={autoProg}
               />
             </div>
           </>
