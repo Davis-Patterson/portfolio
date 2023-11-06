@@ -20,7 +20,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  const [zoomed, setZoomed] = useState(true);
+  const [zoomed, setZoomed] = useState(false);
 
   const [fade, setFade] = useState('in');
 
