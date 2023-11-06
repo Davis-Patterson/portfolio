@@ -135,9 +135,6 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
         {zoomed && (
           <>
             <div className='big-slideshow-container'>
-              <div className='exit-button' onClick={handleZoomOut}>
-                X
-              </div>
               {gifs.map(
                 (gifSrc, index) =>
                   activeClip === index + 1 && (
