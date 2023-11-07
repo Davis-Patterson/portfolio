@@ -171,7 +171,8 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
                     AI-driven NPC dialogues and image rendering. Collaborated
                     remotely with a team, using agile practices. Took a lead
                     role in developing the game mechanics, the UI/UX, and
-                    mentoring fellow team members. You can play 'Mini Quaist'{' '}
+                    mentoring fellow team members. You can play{' '}
+                    <em>'Mini Quaist'</em>{' '}
                     <a
                       target='_blank'
                       rel='noopener noreferrer'
