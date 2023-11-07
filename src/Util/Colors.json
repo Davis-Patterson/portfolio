@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "desc": "Clicking on any color slide will cause all slides to switch colors. Hexcode values and the nearest color name are shown for each color."
+  },
+  {
+    "id": 2,
+    "desc": "Users have the ability to lock color slides to exempt them from switching colors. Color options are shown only on the slide that is being hovered over, except for the locked icon."
+  },
+  {
+    "id": 3,
+    "desc": "Users can display hues for each color slide and fine-tune the colors they desire for their palette."
+  },
+  {
+    "id": 4,
+    "desc": "Users can display up to 10 colors and can input custom hexcodes on any slide if they want to fully customize their palette."
+  },
+  {
+    "id": 5,
+    "desc": "Users can toggle back to previous colors and also toggle dark mode on and off to see how light and dark text appears on each color."
+  }
+]
