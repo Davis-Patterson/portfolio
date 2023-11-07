@@ -17,16 +17,20 @@ const Footer = ({ darkMode }) => {
             className='page-img'
           />
         </div> */}
-        <div className='footer-content'>
+        <div className='footer-content' id='footer-content'>
           <div className='attribution'>
-            <h1 className='footer-name'>DAVIS PATTERSON</h1>
-            <h1 className='footer-subtext'>
+            <h1 className='footer-name' id='footer-name'>
+              DAVIS PATTERSON
+            </h1>
+            <h1 className='footer-subtext' id='footer-subtext'>
               Dedicated and enthusiastic software developer with a passion for
               coding and an eagerness to contribute to team projects.
             </h1>
           </div>
           <div className='social-container'>
-            <h1 className='socials-name'>SOCIALS</h1>
+            <h1 className='socials-name' id='socials-name'>
+              SOCIALS
+            </h1>
             <div className='socials'>
               <a
                 target='_blank'
@@ -55,7 +59,7 @@ const Footer = ({ darkMode }) => {
             </div>
           </div>
         </div>
-        <div className='footer-footer'>
+        <div className='footer-footer' id='footer-footer'>
           <p className='footer-footer-text'>
             © Copyright 2023. Made by{' '}
             <HashLink smooth to='/#home' className='footer-text-link'>

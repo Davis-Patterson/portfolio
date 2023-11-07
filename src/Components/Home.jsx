@@ -25,21 +25,31 @@ const Home = ({ activeSection, darkMode }) => {
             style={pageStyle}
           />
         </div>
-        <h1 className='hello-subtext'>Hello, my name is</h1>
-        <h1 className='title-name'>Davis Patterson</h1>
-        <h1 className='title-subtext'>
+        <h1 className='hello-subtext' id='hello-subtext'>
+          Hello, my name is
+        </h1>
+        <h1 className='title-name' id='title-name'>
+          Davis Patterson
+        </h1>
+        <h1 className='title-subtext' id='title-subtext'>
           Dedicated and enthusiastic software developer with a passion for
           coding and an eagerness to contribute to team projects.
         </h1>
         <hr className='page-break-blue' style={blueStyle} />
         <HashLink smooth to='/#about' className='home-projects-link'>
-          <div className='home-projects-button'>About</div>
+          <div className='home-projects-button' id='about-button'>
+            About
+          </div>
         </HashLink>
         <HashLink smooth to='/#projects' className='home-projects-link'>
-          <div className='home-projects-button'>Projects</div>
+          <div className='home-projects-button' id='projects-button'>
+            Projects
+          </div>
         </HashLink>
         <HashLink smooth to='/#contact' className='home-projects-link'>
-          <div className='home-projects-button'>Contact</div>
+          <div className='home-projects-button' id='contact-button'>
+            Contact
+          </div>
         </HashLink>
         <div className='scroll-icon-container'>
           <HashLink smooth to='/#about' className='scroll-link'>

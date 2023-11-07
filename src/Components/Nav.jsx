@@ -1,11 +1,41 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import headshotIcon from '/src/assets/nav/headshot-icon-zoom.png';
 import linkedinLogo from '/src/assets/nav/linkedin-logo.svg';
 import githubLogo from '/src/assets/nav/github-logo.svg';
 import MaterialUISwitch from './MaterialUISwitch';
+import DehazeIcon from '@mui/icons-material/Dehaze';
 
 const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
+  const [dropdown, setDropdown] = useState(false);
+
+  const dropdownRef = useRef(null);
+  const menuIconRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        menuIconRef.current &&
+        (menuIconRef.current === event.target ||
+          menuIconRef.current.contains(event.target))
+      ) {
+        return;
+      }
+
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdown(false);
+      }
+    }
+
+    if (dropdown) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [dropdown]);
+
   const isActive = (sectionId) => {
     const currentSection = activeSection || 'home';
     return currentSection === sectionId;
@@ -13,6 +43,14 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
 
   const handleDarkModeChange = (event) => {
     setDarkMode(event.target.checked);
+  };
+
+  const handleMenu = () => {
+    setDropdown(!dropdown);
+  };
+
+  const handleDropdown = () => {
+    setDropdown(false);
   };
 
   useEffect(() => {
@@ -41,6 +79,7 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
                 rel='noopener noreferrer'
                 href='https://www.linkedin.com/in/davispatterson/'
                 className='nav-link'
+                id='linkedin-link-nav'
               >
                 <img
                   src={linkedinLogo}
@@ -53,6 +92,7 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
                 rel='noopener noreferrer'
                 href='https://github.com/Davis-Patterson'
                 className='nav-link'
+                id='github-link-nav'
               >
                 <img src={githubLogo} alt='github logo' className='link-logo' />
               </a>
@@ -63,11 +103,19 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
               />
             </div>
           </div>
-          <div className='nav-buttons-container'>
+          <div className='nav-buttons-container' id='nav-buttons-container'>
+            <DehazeIcon
+              className='menu-icon'
+              onClick={handleMenu}
+              ref={menuIconRef}
+              id='menu-icon'
+              style={{ display: 'none' }}
+            />
             <HashLink
               smooth
               to='/#home'
               className={`nav-button ${isActive('home') ? 'active' : ''}`}
+              id='home-button-nav'
             >
               Home
             </HashLink>
@@ -75,6 +123,7 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
               smooth
               to='/#about'
               className={`nav-button ${isActive('about') ? 'active' : ''}`}
+              id='about-button-nav'
             >
               About
             </HashLink>
@@ -82,6 +131,7 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
               smooth
               to='/#projects'
               className={`nav-button ${isActive('projects') ? 'active' : ''}`}
+              id='projects-button-nav'
             >
               Projects
             </HashLink>
@@ -89,11 +139,56 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
               smooth
               to='/#contact'
               className={`nav-button ${isActive('contact') ? 'active' : ''}`}
+              id='contact-button-nav'
             >
               Contact
             </HashLink>
           </div>
         </div>
+        {dropdown && (
+          <div className='dropdown-menu' ref={dropdownRef}>
+            <div className='dropdown-box'>
+              <HashLink
+                smooth
+                to='/#home'
+                onClick={handleDropdown}
+                className='dropdown-link'
+              >
+                Home
+              </HashLink>
+            </div>
+            <div className='dropdown-box'>
+              <HashLink
+                smooth
+                to='/#about'
+                onClick={handleDropdown}
+                className='dropdown-link'
+              >
+                About
+              </HashLink>
+            </div>
+            <div className='dropdown-box'>
+              <HashLink
+                smooth
+                to='/#projects'
+                onClick={handleDropdown}
+                className='dropdown-link'
+              >
+                Projects
+              </HashLink>
+            </div>
+            <div className='dropdown-box'>
+              <HashLink
+                smooth
+                to='/#contact'
+                onClick={handleDropdown}
+                className='dropdown-link'
+              >
+                Contact
+              </HashLink>
+            </div>
+          </div>
+        )}
       </nav>
     </>
   );
