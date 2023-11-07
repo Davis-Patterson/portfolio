@@ -326,29 +326,41 @@ section {
     width: 80%;
     font-size: 1.4em;
   }
+  #about-link {
+    margin: 5px 0px 5px 0px;
+  }
   #about-button {
-    width: 110px;
-    font-size: 1.4em;
+    width: 90px;
+    height: 40px;
+    font-size: 1.2em;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   #projects-button {
-    width: 110px;
-    font-size: 1.4em;
+    width: 90px;
+    height: 40px;
+    font-size: 1.2em;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   #contact-button {
-    width: 110px;
-    font-size: 1.4em;
+    width: 90px;
+    height: 40px;
+    font-size: 1.2em;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   #about-title {
     font-size: 2.8em;
+  }
+  #about-blue {
+    margin: 10px 0px 20px 0px;
+  }
+  #scroll-icon-cont {
+    bottom: 80px;
   }
   #about-img {
     display: none;
