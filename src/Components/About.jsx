@@ -32,46 +32,53 @@ const About = ({ activeSection, darkMode }) => {
         </h1>
         <hr className='page-break-blue' style={blueStyle} />
         <div className='about-content'>
-          <div className='about-description-container' id='about-desc'>
-            <p className='hello-there'>Hello there!</p>
-            <p className='about-description'>
+          <div className='about-description-container' id='about-desc-cont'>
+            <p className='hello-there' id='hello-there'>
+              Hello there!
+            </p>
+            <p className='about-description' id='about-desc'>
               My name is Davis Patterson, a resident of Florida with roots in
               New York City. My professional journey has been centered in media
-              technology. I pursued an education in audio technology and
-              subsequently began a career as an Audio Engineer in NYC.
+              technology. The onset of the COVID-19 pandemic, however, brought
+              significant disruption to the industry, compelling me to undergo a
+              career change.
             </p>
-            <p className='about-description'>
-              The onset of the COVID-19 pandemic, however, brought significant
-              disruption to the industry, compelling me to undergo a career
-              change. During this transition I discovered a love for coding,
-              gravitating towards front-end development specifically with React.
+            <p className='about-description' id='about-desc'>
+              During this transition I discovered a love for coding, gravitating
+              towards front-end development specifically with React. A fervent
+              passion for creating interactive, user-friendly interfaces was
+              ignited along with a desire to excel in the digital landscape.
+              This enthusiasm is about bringing innovation, aesthetics, and
+              functionality together to build web experiences that resonate with
+              users.
             </p>
-            <p className='about-description'>
+            <p className='about-description' id='about-desc'>
               My commitment to constant learning and the relentless pursuit of
               excellence in my craft underscore my dedication and exemplify my
               passion. I possess an eagerness to contribute as a member of a
               collaborative team, and I am enthusiastic about exploring diverse
               development opportunities.
             </p>
-            {/* <p className='about-description'>
-              Thank you for your consideration!
-            </p> */}
             <div className='extra-info'>
               <div className='skills-container'>
-                <p className='skills-title'>My Skills:</p>
+                <p className='skills-title' id='about-skills-title'>
+                  My Skills:
+                </p>
                 <div className='skills-list'>
-                  <p className='skill'>React</p>
-                  <p className='skill'>JavaScript</p>
-                  <p className='skill'>HTML</p>
-                  <p className='skill'>CSS</p>
-                  <p className='skill'>Python</p>
-                  <p className='skill'>Django</p>
-                  <p className='skill'>GIT</p>
-                  <p className='skill'>GitHub</p>
+                  <p className='skill tag'>React</p>
+                  <p className='skill tag'>JavaScript</p>
+                  <p className='skill tag'>HTML</p>
+                  <p className='skill tag'>CSS</p>
+                  <p className='skill tag'>Python</p>
+                  <p className='skill tag'>Django</p>
+                  <p className='skill tag'>GIT</p>
+                  <p className='skill tag'>GitHub</p>
                 </div>
               </div>
               <div className='socials-container'>
-                <p className='skills-title'>My Socials:</p>
+                <p className='skills-title' id='about-socials-title'>
+                  My Socials:
+                </p>
                 <div className='about-socials'>
                   <a
                     href='https://www.linkedin.com/in/davispatterson/'
