@@ -35,23 +35,38 @@ const Home = ({ activeSection, darkMode }) => {
           Dedicated and enthusiastic software developer with a passion for
           coding and an eagerness to contribute to team projects.
         </h1>
-        <hr className='page-break-blue' style={blueStyle} />
-        <HashLink smooth to='/#about' className='home-projects-link'>
+        <hr className='page-break-blue' style={blueStyle} id='about-blue' />
+        <HashLink
+          smooth
+          to='/#about'
+          className='home-projects-link'
+          id='about-link'
+        >
           <div className='home-projects-button' id='about-button'>
             About
           </div>
         </HashLink>
-        <HashLink smooth to='/#projects' className='home-projects-link'>
+        <HashLink
+          smooth
+          to='/#projects'
+          className='home-projects-link'
+          id='projects-link'
+        >
           <div className='home-projects-button' id='projects-button'>
             Projects
           </div>
         </HashLink>
-        <HashLink smooth to='/#contact' className='home-projects-link'>
+        <HashLink
+          smooth
+          to='/#contact'
+          className='home-projects-link'
+          id='contact-link'
+        >
           <div className='home-projects-button' id='contact-button'>
             Contact
           </div>
         </HashLink>
-        <div className='scroll-icon-container'>
+        <div className='scroll-icon-container' id='scroll-icon-cont'>
           <HashLink smooth to='/#about' className='scroll-link'>
             <img
               src={darkMode ? scrollDark : scrollLight}
