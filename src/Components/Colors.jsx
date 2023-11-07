@@ -172,7 +172,7 @@ const Colors = ({ activeProject, darkMode }) => {
                     <a
                       target='_blank'
                       rel='noopener noreferrer'
-                      href='https://github.com/Momentum-Team-19/python-oop-blackjack-Davis-Patterson/tree/main'
+                      href='https://github.com/Momentum-Team-19/react-color-palettes-Davis-Patterson'
                     >
                       here
                     </a>

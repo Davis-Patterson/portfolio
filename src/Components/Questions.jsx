@@ -157,7 +157,7 @@ const Questions = ({ activeProject, darkMode }) => {
                     discussions, and view user profiles. Collaboratively
                     pair-programmed in a duo, using agile practices. Played a
                     pivotal role in UI/UX design and implementation. You can
-                    view 'Questions!'{' '}
+                    view <em>'Questions!'</em>{' '}
                     <a
                       target='_blank'
                       rel='noopener noreferrer'
