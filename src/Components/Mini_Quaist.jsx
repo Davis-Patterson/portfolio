@@ -169,7 +169,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
                     AI-driven NPC dialogues and image rendering. Collaborated
                     remotely with a team, using agile practices. Took a lead
                     role in developing the game mechanics, the UI/UX, and
-                    mentoring fellow team members. You can play Mini Quaist{' '}
+                    mentoring fellow team members. You can play 'Mini Quaist'{' '}
                     <a
                       target='_blank'
                       rel='noopener noreferrer'
@@ -199,7 +199,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
               <div className='slide-imgs'>
                 {imgs.map((imgSrc, index) => (
                   <img
-                    key={imgSrc} // Ideally, use a unique and consistent key instead of the src
+                    key={index}
                     src={imgSrc}
                     alt={`Slide Img ${index + 1}`}
                     className={`slide-img ${

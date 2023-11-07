@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "desc": "Main menu where the user can start the game, check score history, view funds and adjust settings such as volume."
+  },
+  {
+    "id": 2,
+    "desc": "Players are able to bet on the current hand, computer opponent is coded to always match the players bet."
+  },
+  {
+    "id": 3,
+    "desc": "Players are able to split their hands and play both hands independently."
+  },
+  {
+    "id": 4,
+    "desc": "Card counting algorithm lets the player know the running count and if the table is 'hot' or 'cold' based on the cards that have been shown."
+  }
+]
