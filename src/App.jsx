@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import About from './Components/About';
 import MiniQuaist from './Components/Mini_Quaist';
 import Questions from './Components/Questions';
+import Blackjack from './Components/Blackjack';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import './App.css';
@@ -64,6 +65,9 @@ function App() {
       </section>
       <section id='projects' data-project='questions'>
         <Questions activeProject={activeProject} darkMode={darkMode} />
+      </section>
+      <section id='projects' data-project='blackjack'>
+        <Blackjack activeProject={activeProject} darkMode={darkMode} />
       </section>
       <section id='contact' data-project='none'>
         <Contact activeSection={activeSection} darkMode={darkMode} />

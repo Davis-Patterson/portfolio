@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import Background from '/src/assets/questions/background.png';
-import Img1 from '/src/assets/questions/img1.png';
-import Img2 from '/src/assets/questions/img2.png';
-import Img3 from '/src/assets/questions/img3.png';
-import Img4 from '/src/assets/questions/img4.png';
-import Img5 from '/src/assets/questions/img5.png';
-import descriptions from '/src/Util/Questions.json';
+import Background from '/src/assets/blackjack/background.png';
+import Img1 from '/src/assets/blackjack/img1.png';
+import Gif1 from '/src/assets/blackjack/gif1.gif';
+import Gif1Comp from '/src/assets/blackjack/gif1-comp.gif';
+import Img2 from '/src/assets/blackjack/img2.png';
+import Gif2 from '/src/assets/blackjack/gif2.gif';
+import Gif2Comp from '/src/assets/blackjack/gif2-comp.gif';
+import Img3 from '/src/assets/blackjack/img3.png';
+import Gif3 from '/src/assets/blackjack/gif3.gif';
+import Gif3Comp from '/src/assets/blackjack/gif3-comp.gif';
+import Img4 from '/src/assets/blackjack/img4.png';
+import Gif4 from '/src/assets/blackjack/gif4.gif';
+import Gif4Comp from '/src/assets/blackjack/gif4-comp.gif';
+import descriptions from '/src/Util/Blackjack.json';
 import Progress from './Progress';
 
-const Questions = ({ activeProject, darkMode }) => {
+const Blackjack = ({ activeProject, darkMode }) => {
   const [activeClip, setActiveClip] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -17,14 +24,16 @@ const Questions = ({ activeProject, darkMode }) => {
 
   const [fade, setFade] = useState('in');
 
-  const imgs = [Img1, Img2, Img3, Img4, Img5];
+  const gifs = [Gif1, Gif2, Gif3, Gif4];
+  const gifsComp = [Gif1Comp, Gif2Comp, Gif3Comp, Gif4Comp];
+  const imgs = [Img1, Img2, Img3, Img4];
 
   const initialIndexValue = 1;
   const lastClip = imgs.length;
 
   const blueStyle = {
-    width: activeProject === 'questions' ? '50px' : '200px',
-    opacity: activeProject === 'questions' ? '100%' : '0%',
+    width: activeProject === 'blackjack' ? '50px' : '200px',
+    opacity: activeProject === 'blackjack' ? '100%' : '0%',
   };
 
   const pageStyle = {
@@ -119,15 +128,15 @@ const Questions = ({ activeProject, darkMode }) => {
         </div>
         {zoomed && (
           <>
-            <div className='big-questions-container'>
-              {imgs.map(
-                (imgSrc, index) =>
+            <div className='big-slideshow-container'>
+              {gifs.map(
+                (gifSrc, index) =>
                   activeClip === index + 1 && (
                     <img
                       key={index}
-                      src={imgSrc}
+                      src={gifSrc}
                       alt={`Rotating IMG ${index + 1}`}
-                      className='big-slide-imgs'
+                      className='big-slide-gifs'
                       onClick={handleZoomOut}
                     />
                   )
@@ -144,22 +153,21 @@ const Questions = ({ activeProject, darkMode }) => {
         )}
         {!zoomed && (
           <>
-            <div className='title-name'>Questions!</div>
+            <div className='title-name'>Blackjack</div>
             <hr className='mini-break-blue' style={blueStyle} />
             <div className='project-columns'>
               <div className='project-info'>
                 <div className='desc-box'>
                   <p className='mini-desc'>
-                    Developed a Q&A platform, reminiscent of Stack Overflow,
-                    using React. Enables users to create accounts, engage in
-                    discussions, and view user profiles. Collaboratively
-                    pair-programmed in a duo, using agile practices. Played a
-                    pivotal role in UI/UX design and implementation. You can
-                    view 'Questions!'{' '}
+                    Python implementation of the classic Blackjack game, played
+                    in a command-line interface against the computer. Follows
+                    the standard rules of the game and features betting and card
+                    counting. Developed independantly with object oriented
+                    programming principles. You can view the code{' '}
                     <a
                       target='_blank'
                       rel='noopener noreferrer'
-                      href='https://lively-chimera-6dfe46.netlify.app/page/1'
+                      href='https://github.com/Momentum-Team-19/python-oop-blackjack-Davis-Patterson/tree/main'
                     >
                       here
                     </a>
@@ -168,15 +176,15 @@ const Questions = ({ activeProject, darkMode }) => {
                 </div>
               </div>
             </div>
-            <div className='questions-container'>
-              {imgs.map(
-                (imgSrc, index) =>
+            <div className='slideshow-container'>
+              {gifsComp.map(
+                (gifSrc, index) =>
                   activeClip === index + 1 && (
                     <img
                       key={index}
-                      src={imgSrc}
+                      src={gifSrc}
                       alt={`Rotating IMG ${index + 1}`}
-                      className='slideshow-imgs'
+                      className='slide-gifs'
                       onClick={handleZoomIn}
                     />
                   )
@@ -208,4 +216,4 @@ const Questions = ({ activeProject, darkMode }) => {
   );
 };
 
-export default Questions;
+export default Blackjack;
