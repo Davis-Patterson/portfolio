@@ -159,12 +159,14 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
         )}
         {!zoomed && (
           <>
-            <div className='title-name'>Mini Quaist</div>
+            <div className='title-name' id='mini-title'>
+              Mini Quaist
+            </div>
             <hr className='mini-break-blue' style={blueStyle} />
             <div className='project-columns'>
-              <div className='project-info'>
-                <div className='desc-box'>
-                  <p className='mini-desc'>
+              <div className='project-info' id='project-info'>
+                <div className='desc-box' id='desc-box'>
+                  <p className='mini-desc' id='mini-desc'>
                     Top-down RPG video game built in React. Incorporated
                     AI-driven NPC dialogues and image rendering. Collaborated
                     remotely with a team, using agile practices. Took a lead
@@ -182,7 +184,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
                 </div>
               </div>
             </div>
-            <div className='slideshow-container'>
+            <div className='slideshow-container' id='mini-slideshow-container'>
               {gifsComp.map(
                 (gifSrc, index) =>
                   activeClip === index + 1 && (

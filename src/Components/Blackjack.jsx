@@ -153,12 +153,14 @@ const Blackjack = ({ activeProject, darkMode }) => {
         )}
         {!zoomed && (
           <>
-            <div className='title-name'>Blackjack</div>
+            <div className='title-name' id='black-title'>
+              Blackjack
+            </div>
             <hr className='mini-break-blue' style={blueStyle} />
             <div className='project-columns'>
-              <div className='project-info'>
-                <div className='desc-box'>
-                  <p className='mini-desc'>
+              <div className='project-info' id='black-project-info'>
+                <div className='desc-box' id='black-desc-box'>
+                  <p className='mini-desc' id='black-desc'>
                     Python implementation of the classic Blackjack game, played
                     in a command-line interface against the computer. Follows
                     the standard rules of the game and features betting and card
@@ -176,7 +178,7 @@ const Blackjack = ({ activeProject, darkMode }) => {
                 </div>
               </div>
             </div>
-            <div className='slideshow-container'>
+            <div className='slideshow-container' id='black-slideshow-container'>
               {gifsComp.map(
                 (gifSrc, index) =>
                   activeClip === index + 1 && (

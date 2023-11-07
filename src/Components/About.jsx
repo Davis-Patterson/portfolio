@@ -27,10 +27,12 @@ const About = ({ activeSection, darkMode }) => {
             style={pageStyle}
           />
         </div>
-        <h1 className='title-name'>About Me</h1>
+        <h1 className='title-name' id='about-title'>
+          About Me
+        </h1>
         <hr className='page-break-blue' style={blueStyle} />
         <div className='about-content'>
-          <div className='about-description-container'>
+          <div className='about-description-container' id='about-desc'>
             <p className='hello-there'>Hello there!</p>
             <p className='about-description'>
               My name is Davis Patterson, a resident of Florida with roots in
@@ -95,7 +97,7 @@ const About = ({ activeSection, darkMode }) => {
               </div>
             </div>
           </div>
-          <div className='about-img'>
+          <div className='about-img' id='about-img'>
             <img
               src={headshotCircle}
               alt='headshot'

@@ -50,10 +50,14 @@ const Contact = ({ activeSection, darkMode }) => {
             style={pageStyle}
           />
         </div>
-        <h1 className='title-name'>Contact Me</h1>
+        <h1 className='title-name' id='contact-title'>
+          Contact Me
+        </h1>
         <hr className='contact-page-break' style={blueStyle} />
         <div className='contact-socials-container'>
-          <p className='skills-title'>My Socials:</p>
+          <p className='skills-title' id='skills-title'>
+            My Socials:
+          </p>
           <div className='contact-socials'>
             <a
               target='_blank'
@@ -65,6 +69,7 @@ const Contact = ({ activeSection, darkMode }) => {
                 src={darkMode ? linkedinLogoWhite : linkedinLogo}
                 alt='linkedin logo'
                 className='about-link-logo'
+                id='contact-linkedin'
               />
             </a>
             <a
@@ -77,11 +82,12 @@ const Contact = ({ activeSection, darkMode }) => {
                 src={darkMode ? githubLogoWhite : githubLogo}
                 alt='github logo'
                 className='about-link-logo'
+                id='contact-github'
               />
             </a>
           </div>
         </div>
-        <div className='contact-content'>
+        <div className='contact-content' id='contact-content'>
           <form onSubmit={handleSubmit} className='contact-form'>
             <p className='email-form-title'>Send me an email:</p>
             <input

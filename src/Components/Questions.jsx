@@ -144,12 +144,14 @@ const Questions = ({ activeProject, darkMode }) => {
         )}
         {!zoomed && (
           <>
-            <div className='title-name'>Questions!</div>
+            <div className='title-name' id='ques-title'>
+              Questions!
+            </div>
             <hr className='mini-break-blue' style={blueStyle} />
             <div className='project-columns'>
-              <div className='project-info'>
-                <div className='desc-box'>
-                  <p className='mini-desc'>
+              <div className='project-info' id='ques-project-info'>
+                <div className='desc-box' id='ques-desc-box'>
+                  <p className='mini-desc' id='ques-desc'>
                     Developed a Q&A platform, reminiscent of Stack Overflow,
                     using React. Enables users to create accounts, engage in
                     discussions, and view user profiles. Collaboratively
@@ -168,7 +170,7 @@ const Questions = ({ activeProject, darkMode }) => {
                 </div>
               </div>
             </div>
-            <div className='questions-container'>
+            <div className='slideshow-container' id='ques-slideshow-container'>
               {imgs.map(
                 (imgSrc, index) =>
                   activeClip === index + 1 && (
@@ -176,7 +178,7 @@ const Questions = ({ activeProject, darkMode }) => {
                       key={index}
                       src={imgSrc}
                       alt={`Rotating IMG ${index + 1}`}
-                      className='slideshow-imgs'
+                      className='slide-gifs'
                       onClick={handleZoomIn}
                     />
                   )
