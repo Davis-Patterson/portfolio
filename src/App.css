@@ -669,6 +669,7 @@ html {
   color: var(--clr-dark);
   transform: scaleY(95%);
   margin: 0px 0px 0px 0px;
+  text-align: center;
 }
 
 .title-subtext {
