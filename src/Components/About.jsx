@@ -45,12 +45,11 @@ const About = ({ activeSection, darkMode }) => {
             </p>
             <p className='about-description' id='about-desc'>
               During this transition I discovered a love for coding, gravitating
-              towards front-end development specifically with React. A fervent
-              passion for creating interactive, user-friendly interfaces was
-              ignited along with a desire to excel in the digital landscape.
-              This enthusiasm is about bringing innovation, aesthetics, and
-              functionality together to build web experiences that resonate with
-              users.
+              towards front-end development. A fervent passion for creating
+              interactive, user-friendly interfaces was ignited along with a
+              desire to excel in the digital landscape. This enthusiasm is about
+              bringing innovation, aesthetics, and functionality together to
+              build web experiences that resonate with users.
             </p>
             <p className='about-description' id='about-desc'>
               My commitment to constant learning and the relentless pursuit of

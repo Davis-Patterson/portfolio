@@ -32,7 +32,7 @@ const Home = ({ activeSection, darkMode }) => {
           Davis Patterson
         </h1>
         <h1 className='title-subtext' id='title-subtext'>
-          Dedicated and enthusiastic software developer with a passion for
+          Dedicated software developer with a passion for
           coding and an eagerness to contribute to team projects.
         </h1>
         <hr className='page-break-blue' style={blueStyle} id='about-blue' />
