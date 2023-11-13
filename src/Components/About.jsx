@@ -33,82 +33,92 @@ const About = ({ activeSection, darkMode }) => {
         <hr className='page-break-blue' style={blueStyle} />
         <div className='about-content'>
           <div className='about-description-container' id='about-desc-cont'>
-            <p className='hello-there' id='hello-there'>
-              Hello there!
-            </p>
-            <p className='about-description' id='about-desc'>
-              My name is Davis Patterson, a resident of Florida with roots in
-              New York City. My professional journey has been centered in media
-              technology. The onset of the COVID-19 pandemic, however, brought
-              significant disruption to the industry, compelling me to undergo a
-              career change.
-            </p>
-            <p className='about-description' id='about-desc'>
-              During this transition I discovered a love for coding, gravitating
-              towards front-end development. A fervent passion for creating
-              interactive, user-friendly interfaces was ignited along with a
-              desire to excel in the digital landscape. This enthusiasm is about
-              bringing innovation, aesthetics, and functionality together to
-              build web experiences that resonate with users.
-            </p>
-            <p className='about-description' id='about-desc'>
-              My commitment to constant learning and the relentless pursuit of
-              excellence in my craft underscore my dedication and exemplify my
-              passion. I possess an eagerness to contribute as a member of a
-              collaborative team, and I am enthusiastic about exploring diverse
-              development opportunities.
-            </p>
-            <div className='extra-info'>
-              <div className='skills-container'>
-                <p className='skills-title' id='about-skills-title'>
-                  My Skills:
-                </p>
-                <div className='skills-list'>
-                  <p className='skill tag'>React</p>
-                  <p className='skill tag'>JavaScript</p>
-                  <p className='skill tag'>HTML</p>
-                  <p className='skill tag'>CSS</p>
-                  <p className='skill tag'>Python</p>
-                  <p className='skill tag'>Django</p>
-                  <p className='skill tag'>GIT</p>
-                  <p className='skill tag'>GitHub</p>
-                </div>
-              </div>
-              <div className='socials-container'>
-                <p className='skills-title' id='about-socials-title'>
-                  My Socials:
-                </p>
-                <div className='about-socials'>
-                  <a
-                    href='https://www.linkedin.com/in/davispatterson/'
-                    className='about-link'
-                  >
-                    <img
-                      src={darkMode ? linkedinLogoWhite : linkedinLogo}
-                      alt='linkedin logo'
-                      className='about-link-logo'
-                    />
-                  </a>
-                  <a
-                    href='https://github.com/Davis-Patterson'
-                    className='about-link'
-                  >
-                    <img
-                      src={darkMode ? githubLogoWhite : githubLogo}
-                      alt='github logo'
-                      className='about-link-logo'
-                    />
-                  </a>
-                </div>
-              </div>
+            <div className='about-desc-box' id='about-desc-box'>
+              <p className='hello-there' id='hello-there'>
+                Hello there!
+              </p>
+              <p className='about-description' id='about-desc'>
+                My name is Davis Patterson, a resident of Florida with roots in
+                New York City. My professional journey began in media technology
+                at Ithaca College. The onset of the COVID-19 pandemic, however,
+                brought significant disruption to the industry, compelling me to
+                undergo a career change.
+              </p>
+              <p className='about-description' id='about-desc'>
+                During this transition I completed Momentum's full-time 16-week
+                intensive full-stack bootcamp where I discovered a love for
+                coding, gravitating towards front-end development. I
+                particularly enjoy bringing together innovation, aesthetics, and
+                functionality to build a web experience that will resonate with
+                the user.
+              </p>
+              <p className='about-description' id='about-desc'>
+                I am committed to continuous learning and strive for excellence
+                in my work. As a team player, I am ready to explore various
+                development opportunities and contribute effectively.
+              </p>
+            </div>
+            <div className='about-img' id='about-img'>
+              <img
+                src={headshotCircle}
+                alt='headshot'
+                className='about-headshot'
+              />
             </div>
           </div>
-          <div className='about-img' id='about-img'>
-            <img
-              src={headshotCircle}
-              alt='headshot'
-              className='about-headshot'
-            />
+          <div className='extra-info' id='extra-info'>
+            <div className='skills-container'>
+              <p className='skills-title' id='about-skills-title'>
+                Skills:
+              </p>
+              <div className='skills-list'>
+                <p className='skill tag'>React</p>
+                <p className='skill tag'>JavaScript</p>
+                <p className='skill tag'>HTML</p>
+                <p className='skill tag'>CSS</p>
+                <p className='skill tag'>Python</p>
+                <p className='skill tag'>Django</p>
+                <p className='skill tag'>GIT</p>
+                <p className='skill tag'>GitHub</p>
+              </div>
+            </div>
+            <div className='certs-container'>
+              <p className='skills-title' id='about-skills-title'>
+                Certifications:
+              </p>
+              <div className='skills-list'>
+                <p className='skill tag'>MTA Security</p>
+                <p className='skill tag'>CompTia Server+</p>
+                <p className='skill tag'>CompTia Network+</p>
+              </div>
+            </div>
+            <div className='socials-container'>
+              <p className='skills-title' id='about-socials-title'>
+                Socials:
+              </p>
+              <div className='about-socials'>
+                <a
+                  href='https://www.linkedin.com/in/davispatterson/'
+                  className='about-link'
+                >
+                  <img
+                    src={darkMode ? linkedinLogoWhite : linkedinLogo}
+                    alt='linkedin logo'
+                    className='about-link-logo'
+                  />
+                </a>
+                <a
+                  href='https://github.com/Davis-Patterson'
+                  className='about-link'
+                >
+                  <img
+                    src={darkMode ? githubLogoWhite : githubLogo}
+                    alt='github logo'
+                    className='about-link-logo'
+                  />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

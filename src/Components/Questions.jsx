@@ -148,29 +148,40 @@ const Questions = ({ activeProject, darkMode }) => {
               Questions!
             </div>
             <hr className='mini-break-blue' style={blueStyle} />
-            <div className='project-columns'>
-              <div className='project-info' id='ques-project-info'>
-                <div className='desc-box' id='ques-desc-box'>
-                  <p className='mini-desc' id='ques-desc'>
-                    Developed a Q&A platform, reminiscent of Stack Overflow,
-                    using React. Enables users to create accounts, engage in
-                    discussions, and view user profiles. Collaboratively
-                    pair-programmed in a duo, using agile practices. Played a
-                    pivotal role in UI/UX design and implementation. You can
-                    view <em>'Questions!'</em>{' '}
-                    <a
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      href='https://lively-chimera-6dfe46.netlify.app/page/1'
-                    >
-                      here
-                    </a>
-                    .
-                  </p>
-                </div>
+            <div className='project-info' id='ques-project-info'>
+              <div className='desc-box' id='ques-desc-box'>
+                <p className='mini-desc' id='ques-desc'>
+                  Developed a Q&A platform, reminiscent of Stack Overflow, using
+                  React. Enables users to create accounts, engage in
+                  discussions, and view user profiles. Collaboratively
+                  pair-programmed in a duo, using agile practices. Played a
+                  pivotal role in UI/UX design and implementation. You can view
+                  the <em>'Questions!'</em> app or view the code repository
+                  here:
+                </p>
               </div>
             </div>
-            <div className='slideshow-container' id='ques-slideshow-container'>
+            <div className='link-box'>
+              <a
+                className='link-button'
+                id='link-button'
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://lively-chimera-6dfe46.netlify.app/page/1'
+              >
+                App
+              </a>
+              <a
+                className='link-button'
+                id='link-button'
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://github.com/Davis-Patterson/questions-react'
+              >
+                GitHub
+              </a>
+            </div>
+            <div className='slideshow-container' id='mini-slideshow-container'>
               {imgs.map(
                 (imgSrc, index) =>
                   activeClip === index + 1 && (
