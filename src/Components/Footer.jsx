@@ -23,8 +23,8 @@ const Footer = ({ darkMode }) => {
               DAVIS PATTERSON
             </h1>
             <h1 className='footer-subtext' id='footer-subtext'>
-              Dedicated and enthusiastic software developer with a passion for
-              coding and an eagerness to contribute to team projects.
+              Dedicated software developer with a passion for coding and an
+              eagerness to contribute to team projects.
             </h1>
           </div>
           <div className='social-container'>
@@ -36,7 +36,7 @@ const Footer = ({ darkMode }) => {
                 target='_blank'
                 rel='noopener noreferrer'
                 href='https://www.linkedin.com/in/davispatterson/'
-                className='nav-link'
+                className='footer-link'
               >
                 <img
                   src={darkMode ? linkedinLogoWhite : linkedinLogo}
@@ -48,7 +48,7 @@ const Footer = ({ darkMode }) => {
                 target='_blank'
                 rel='noopener noreferrer'
                 href='https://github.com/Davis-Patterson'
-                className='nav-link'
+                className='footer-link'
               >
                 <img
                   src={darkMode ? githubLogoWhite : githubLogo}

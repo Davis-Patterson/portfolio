@@ -176,6 +176,12 @@ section {
   #about-desc-cont {
     width: 95%;
   }
+  #extra-info {
+    width: 90%;
+  }
+  #about-desc-box {
+    width: 95%;
+  }
   #mini-title {
     font-size: 3.2em;
   }
@@ -281,6 +287,12 @@ section {
   #menu-icon:active {
     color: var(--clr-accent-light);
     transform: scale(1.45);
+  }
+  #about-skills-title {
+    font-size: 1.4rem;
+  }
+  #about-socials-title {
+    font-size: 1.4rem;
   }
 }
 
@@ -399,6 +411,12 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  #about-skills-title {
+    font-size: 1.2rem;
+  }
+  #about-socials-title {
+    font-size: 1.2rem;
   }
   #mini-desc {
     width: 90%;
@@ -580,6 +598,24 @@ section {
   transition: transform 0.2s;
 }
 .nav-link:active {
+  transform: scale(95%);
+  color: var(--clr-light);
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.footer-link {
+  margin: 0px 15px 0px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+.footer-link:hover {
+  transform: scale(110%);
+  color: var(--clr-light);
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+.footer-link:active {
   transform: scale(95%);
   color: var(--clr-light);
   text-decoration: none;
@@ -896,15 +932,19 @@ section {
 .about-content {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
+  flex-direction: column;
   width: 100%;
 }
 
 .about-description-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.about-desc-box {
   width: 50%;
 }
 
@@ -933,7 +973,8 @@ section {
 }
 
 .about-headshot {
-  width: 80%;
+  max-width: 80%;
+  max-height: 323px;
   border: 18px solid var(--clr-break);
   border-radius: 50%;
   z-index: 20;
@@ -950,10 +991,10 @@ section {
 
 .skills-container {
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  width: 50%;
+  width: 33%;
   margin: 0px 0px 0px 0px;
 }
 
@@ -990,12 +1031,22 @@ section {
   padding: 5px 15px 5px 15px;
 }
 
+.certs-container {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 33%;
+  margin: 0px 0px 0px 5%;
+
+}
+
 .socials-container {
   display: flex;
   justify-content: left;
   align-items: flex-start;
   flex-direction: column;
-  width: 45%;
+  width: 33%;
   margin: 0px 0px 0px 5%;
 }
 
@@ -1007,7 +1058,7 @@ section {
 }
 
 .about-link {
-  margin: 0px 15px 0px 15px;
+  margin: 0px 5px 0px 0px;
   cursor: pointer;
   z-index: 50;
 }
@@ -1120,8 +1171,35 @@ section {
   line-height: .9;
   color: var(--clr-dark);
   text-align: justify;
-  margin: 10px 0px 20px 0px;
+  margin: 10px 0px 0px 0px;
   z-index: 20;
+}
+
+.link-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  margin: 10px 0px 10px 0px;
+}
+
+.link-button {
+  margin: 0px 5px;
+  text-align: center;
+  border: 1px solid var(--clr-accent);
+  background-color: var(--clr-accent);
+  padding: 5px 8px 5px 8px;
+  color: var(--clr-white);
+  border-radius: 5px;
+  width: 75px;
+}
+.link-button:hover {
+  border: 1px solid var(--clr-accent-dark);
+  background-color: var(--clr-accent-dark);
+  color: var(--clr-white);
+}
+.link-button:active {
+  transform: scale(95%);
 }
 
 .big-slide-gifs {

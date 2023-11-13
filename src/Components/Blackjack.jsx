@@ -157,27 +157,28 @@ const Blackjack = ({ activeProject, darkMode }) => {
               Blackjack
             </div>
             <hr className='mini-break-blue' style={blueStyle} />
-            <div className='project-columns'>
-              <div className='project-info' id='black-project-info'>
-                <div className='desc-box' id='black-desc-box'>
-                  <p className='mini-desc' id='black-desc'>
-                    Python implementation of the classic Blackjack game, played
-                    in a command-line interface against the computer. Follows
-                    the standard rules of the game and features betting and card
-                    counting. Developed independantly with object oriented
-                    programming principles. You can view the <em>Blackjack</em>{' '}
-                    code{' '}
-                    <a
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      href='https://github.com/Momentum-Team-19/python-oop-blackjack-Davis-Patterson/tree/main'
-                    >
-                      here
-                    </a>
-                    .
-                  </p>
-                </div>
+            <div className='project-info' id='black-project-info'>
+              <div className='desc-box' id='black-desc-box'>
+                <p className='mini-desc' id='black-desc'>
+                  Python implementation of the classic Blackjack game, played in
+                  a command-line interface against the computer. Follows the
+                  standard rules of the game and features betting and card
+                  counting. Developed independently with object oriented
+                  programming principles. You can view the <em>Blackjack</em>{' '}
+                  code here:
+                </p>
               </div>
+            </div>
+            <div className='link-box'>
+              <a
+                className='link-button'
+                id='link-button'
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://github.com/Davis-Patterson/blackjack-python-oop'
+              >
+                GitHub
+              </a>
             </div>
             <div className='slideshow-container' id='black-slideshow-container'>
               {gifsComp.map(

@@ -160,26 +160,27 @@ const Colors = ({ activeProject, darkMode }) => {
               Colors
             </div>
             <hr className='mini-break-blue' style={blueStyle} />
-            <div className='project-columns'>
-              <div className='project-info' id='black-project-info'>
-                <div className='desc-box' id='black-desc-box'>
-                  <p className='mini-desc' id='black-desc'>
-                    Developed a color palette application, reminiscent of
-                    Coolers.com, using React. Enables users to quickly create
-                    color palettes with up to 10 randomly generated hexcode
-                    colors and modify their hues if desired. Developed
-                    independantly. You can view the <em>'Colors!'</em> code{' '}
-                    <a
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      href='https://github.com/Momentum-Team-19/react-color-palettes-Davis-Patterson'
-                    >
-                      here
-                    </a>
-                    .
-                  </p>
-                </div>
+            <div className='project-info' id='black-project-info'>
+              <div className='desc-box' id='black-desc-box'>
+                <p className='mini-desc' id='black-desc'>
+                  Developed a color palette application, reminiscent of
+                  Coolers.com, using React. Enables users to quickly create
+                  color palettes with up to 10 randomly generated hexcode colors
+                  and modify their hues if desired. Developed independently. You
+                  can view the <em>'Colors!'</em> code here:
+                </p>
               </div>
+            </div>
+            <div className='link-box'>
+              <a
+                className='link-button'
+                id='link-button'
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://github.com/Davis-Patterson/colors-react'
+              >
+                GitHub
+              </a>
             </div>
             <div className='slideshow-container' id='black-slideshow-container'>
               {gifsComp.map(

@@ -163,27 +163,37 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
               Mini Quaist
             </div>
             <hr className='mini-break-blue' style={blueStyle} />
-            <div className='project-columns'>
-              <div className='project-info' id='project-info'>
-                <div className='desc-box' id='desc-box'>
-                  <p className='mini-desc' id='mini-desc'>
-                    Top-down RPG video game built in React. Incorporated
-                    AI-driven NPC dialogues and image rendering. Collaborated
-                    remotely with a team, using agile practices. Took a lead
-                    role in developing the game mechanics, the UI/UX, and
-                    mentoring fellow team members. You can play{' '}
-                    <em>'Mini Quaist'</em>{' '}
-                    <a
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      href='https://mini-quaist.netlify.app/home'
-                    >
-                      here
-                    </a>
-                    .
-                  </p>
-                </div>
+            <div className='project-info' id='project-info'>
+              <div className='desc-box' id='desc-box'>
+                <p className='mini-desc' id='mini-desc'>
+                  Top-down RPG video game built in React. Incorporated AI-driven
+                  NPC dialogues and image rendering. Collaborated remotely with
+                  a team, using agile practices. Took a lead role in developing
+                  the game mechanics, the UI/UX, and mentoring fellow team
+                  members. You can play <em>'Mini Quaist'</em> or view the code
+                  repository here:
+                </p>
               </div>
+            </div>
+            <div className='link-box'>
+              <a
+                className='link-button'
+                id='link-button'
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://mini-quaist.netlify.app/home'
+              >
+                App
+              </a>
+              <a
+                className='link-button'
+                id='link-button'
+                target='_blank'
+                rel='noopener noreferrer'
+                href='https://github.com/Davis-Patterson/Mini-QuAIst'
+              >
+                GitHub
+              </a>
             </div>
             <div className='slideshow-container' id='mini-slideshow-container'>
               {gifsComp.map(
