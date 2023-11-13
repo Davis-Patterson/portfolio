@@ -45,9 +45,9 @@ const About = ({ activeSection, darkMode }) => {
                 industry, compelling me to undergo a career change.
               </p>
               <p className='about-description' id='about-desc'>
-                During this transition I completed Momentum's full-time 16-week
-                intensive full-stack bootcamp where I discovered a love for
-                coding, gravitating towards front-end development. I
+                During this transition, I completed Momentum's full-time 16-week
+                intensive full-stack engineering bootcamp where I discovered a
+                love for coding, gravitating towards front-end development. I
                 particularly enjoy bringing together innovation, aesthetics, and
                 functionality to build a web experience that will resonate with
                 the user.
