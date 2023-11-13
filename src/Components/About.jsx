@@ -41,9 +41,9 @@ const About = ({ activeSection, darkMode }) => {
                 My name is Davis Patterson, a current resident of Florida with
                 roots in New York City. My professional journey began in media
                 technology at Ithaca College and continued at the School of
-                Audio Engineering, New York. The onset of the COVID-19 pandemic,
-                however, brought significant disruption to the industry,
-                compelling me to undergo a career change.
+                Audio Engineering in New York. The onset of the COVID-19
+                pandemic, however, brought significant disruption to the
+                industry, compelling me to undergo a career change.
               </p>
               <p className='about-description' id='about-desc'>
                 During this transition, I completed Momentum's full-time 16-week
