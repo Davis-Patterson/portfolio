@@ -54,8 +54,9 @@ const About = ({ activeSection, darkMode }) => {
               </p>
               <p className='about-description' id='about-desc'>
                 I am committed to continuous learning and strive for excellence
-                in my work. As a team player, I am ready to explore various
-                development opportunities and contribute effectively.
+                in my work. I am eager to explore various development
+                opportunities and to contribute effectively as a member of a
+                collaborative team.
               </p>
             </div>
             <div className='about-img' id='about-img'>
