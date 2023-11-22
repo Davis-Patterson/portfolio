@@ -38,12 +38,20 @@ const About = ({ activeSection, darkMode }) => {
                 Hello there!
               </p>
               <p className='about-description' id='about-desc'>
-                My name is Davis Patterson, a current resident of Florida with
-                roots in New York City. My professional journey began in media
-                technology at Ithaca College and continued at the School of
-                Audio Engineering in New York. The onset of the COVID-19
-                pandemic, however, brought significant disruption to the
-                industry, compelling me to undergo a career change.
+                My name is Davis Patterson. I am a software developer seeking
+                opportunities to leverage skills and collaborate with industry
+                professionals. I am eager to explore various development
+                opportunities and to contribute effectively as a member of a
+                collaborative team. I am committed to continuous learning and
+                strive for excellence in my work.
+              </p>
+              <p className='about-description' id='about-desc'>
+                I am a current resident of Florida with roots in New York City.
+                My professional journey began in media technology at Ithaca
+                College and continued at the School of Audio Engineering in New
+                York. The onset of the COVID-19 pandemic, however, brought
+                significant disruption to the industry, compelling me to undergo
+                a career change.
               </p>
               <p className='about-description' id='about-desc'>
                 During this transition, I completed Momentum's full-time 16-week
@@ -51,13 +59,8 @@ const About = ({ activeSection, darkMode }) => {
                 love for coding, gravitating towards front-end development. I
                 particularly enjoy bringing together innovation, aesthetics, and
                 functionality to build a web experience that will resonate with
-                the user.
-              </p>
-              <p className='about-description' id='about-desc'>
-                I am committed to continuous learning and strive for excellence
-                in my work. I am eager to explore various development
-                opportunities and to contribute effectively as a member of a
-                collaborative team.
+                the user. Please consider scrolling to see some of the recent
+                projects I've worked on!
               </p>
             </div>
             <div className='about-img' id='about-img'>

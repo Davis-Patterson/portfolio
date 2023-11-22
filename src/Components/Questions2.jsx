@@ -28,7 +28,7 @@ const Questions = ({ activeProject, darkMode }) => {
   };
 
   const pageStyle = {
-    opacity: darkMode ? '15%' : '25%',
+    opacity: darkMode ? '25%' : '35%',
   };
 
   const activeDescription = descriptions.find(
@@ -119,15 +119,15 @@ const Questions = ({ activeProject, darkMode }) => {
         </div>
         {zoomed && (
           <>
-            <div className='big-slideshow-container'>
+            <div className='big-questions-container'>
               {imgs.map(
                 (imgSrc, index) =>
                   activeClip === index + 1 && (
                     <img
                       key={index}
                       src={imgSrc}
-                      alt={`Rotating img ${index + 1}`}
-                      className='big-slide-gifs'
+                      alt={`Rotating IMG ${index + 1}`}
+                      className='big-slide-imgs'
                       onClick={handleZoomOut}
                     />
                   )
@@ -144,13 +144,13 @@ const Questions = ({ activeProject, darkMode }) => {
         )}
         {!zoomed && (
           <>
-            <div className='title-name' id='mini-title'>
+            <div className='title-name' id='ques-title'>
               Questions!
             </div>
             <hr className='mini-break-blue' style={blueStyle} />
-            <div className='project-info' id='project-info'>
-              <div className='desc-box' id='desc-box'>
-                <p className='mini-desc' id='mini-desc'>
+            <div className='project-info' id='ques-project-info'>
+              <div className='desc-box' id='ques-desc-box'>
+                <p className='mini-desc' id='ques-desc'>
                   Developed a Q&A platform, reminiscent of Stack Overflow, using
                   React. Enables users to create accounts, engage in
                   discussions, and view user profiles. Collaboratively
@@ -167,7 +167,7 @@ const Questions = ({ activeProject, darkMode }) => {
                 id='link-button'
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://mini-quaist.netlify.app/home'
+                href='https://lively-chimera-6dfe46.netlify.app/page/1'
               >
                 App
               </a>
@@ -176,7 +176,7 @@ const Questions = ({ activeProject, darkMode }) => {
                 id='link-button'
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://github.com/Davis-Patterson/Mini-QuAIst'
+                href='https://github.com/Davis-Patterson/questions-react'
               >
                 GitHub
               </a>
@@ -188,7 +188,7 @@ const Questions = ({ activeProject, darkMode }) => {
                     <img
                       key={index}
                       src={imgSrc}
-                      alt={`Rotating img ${index + 1}`}
+                      alt={`Rotating IMG ${index + 1}`}
                       className='slide-gifs'
                       onClick={handleZoomIn}
                     />

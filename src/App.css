@@ -31,12 +31,14 @@
   --clr-nav: #505050;
   --clr-dropdown: #ffffff;
   --clr-screen: #0000008a;
+  --clr-error: #ff5252;
+  --clr-success: #5cff47;
 }
 
 .darkMode {
   --clr-light: #1a1a1a;
   --clr-dark: #d0d0d0;
-  --clr-break: #424242;
+  --clr-break: #7a7a7a;
   --clr-accent: #2cb0ec;
   --clr-accent-light: #68dcff;
   --clr-accent-dark: #2091fa;
@@ -47,6 +49,8 @@
   --clr-nav: #424242;
   --clr-dropdown: #585858;
   --clr-screen: #00000077;
+  --clr-error: #ff0000;
+  --clr-success: #1eff00;
 }
 
 * {
@@ -1342,7 +1346,7 @@ section {
 .contact-content {
   width: 500px;
   border: 1px solid #777777;
-  padding: 40px;
+  padding: 40px 20px 40px 20px;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -1395,6 +1399,10 @@ section {
   margin: 0px 0px 30px 0px;
 }
 
+.name-input, .email-input, .message-input {
+  cursor: text;
+}
+
 .name-input, .email-input {
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
@@ -1417,9 +1425,27 @@ section {
   width: 350px;
   margin: 5px;
   resize: vertical;
+  max-height: 250px;
+  min-height: 72px;
+  margin: 0px 0px 20px 0px
 }
 .name-input:hover, .email-input:hover, .message-input:hover {
   border: 2px solid var(--clr-accent);
+}
+.error {
+  color: var(--clr-error);
+}
+.success {
+  color: var(--clr-success);
+}
+.sending {
+  color: var(--clr-break);
+}
+.error, .success, .sending {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.2em;
+  font-weight: 100;
+  font-style: italic;
 }
 
 .submit-button {
@@ -1428,7 +1454,7 @@ section {
   color: var(--clr-white);
   background-color: var(--clr-accent);
   cursor: pointer;
-  margin: 42px 0px 00px 0px;
+  margin: 22px 0px 0px 0px;
   text-decoration: none;
   border-radius: 10px;
   z-index: 50;
