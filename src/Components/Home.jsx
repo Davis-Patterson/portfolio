@@ -32,8 +32,8 @@ const Home = ({ activeSection, darkMode }) => {
           Davis Patterson
         </h1>
         <h1 className='title-subtext' id='title-subtext'>
-          Dedicated software developer with a passion for
-          coding and an eagerness to contribute to team projects.
+          Software developer seeking opportunities to leverage skills and
+          collaborate with industry professionals.
         </h1>
         <hr className='page-break-blue' style={blueStyle} id='about-blue' />
         <HashLink

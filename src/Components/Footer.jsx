@@ -23,8 +23,8 @@ const Footer = ({ darkMode }) => {
               DAVIS PATTERSON
             </h1>
             <h1 className='footer-subtext' id='footer-subtext'>
-              Dedicated software developer with a passion for coding and an
-              eagerness to contribute to team projects.
+              Software developer seeking opportunities to leverage skills and
+              collaborate with industry professionals.
             </h1>
           </div>
           <div className='social-container'>
