@@ -59,8 +59,8 @@ const About = ({ activeSection, darkMode }) => {
                 love for coding, gravitating towards front-end development. I
                 particularly enjoy bringing together innovation, aesthetics, and
                 functionality to build a web experience that will resonate with
-                the user. Please consider scrolling to see some of the recent
-                projects I've worked on!
+                the user. Please scroll to see some of the recent projects I've
+                worked on!
               </p>
             </div>
             <div className='about-img' id='about-img'>
