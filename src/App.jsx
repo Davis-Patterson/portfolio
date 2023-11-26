@@ -68,11 +68,11 @@ function App() {
       <section id='projects' data-project='MiTunes'>
         <MiTunes activeProject={activeProject} darkMode={darkMode} />
       </section>
-      <section id='projects' data-project='questions'>
-        <Questions activeProject={activeProject} darkMode={darkMode} />
-      </section>
       <section id='projects' data-project='blackjack'>
         <Blackjack activeProject={activeProject} darkMode={darkMode} />
+      </section>
+      <section id='projects' data-project='questions'>
+        <Questions activeProject={activeProject} darkMode={darkMode} />
       </section>
       <section id='projects' data-project='colors'>
         <Colors activeProject={activeProject} darkMode={darkMode} />
