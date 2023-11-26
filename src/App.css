@@ -1423,7 +1423,7 @@ section {
   padding: 15px 15px;
   border-radius: 10px;
   width: 350px;
-  margin: 5px;
+  margin: 2.5px 5px;
 }
 .message-input {
   font-family: "Montserrat", sans-serif;
@@ -1438,7 +1438,7 @@ section {
   resize: vertical;
   max-height: 250px;
   min-height: 72px;
-  margin: 0px 0px 20px 0px
+  margin: 2.5px 0px 20px 0px
 }
 .name-input:hover, .email-input:hover, .message-input:hover {
   border: 2px solid var(--clr-accent);
