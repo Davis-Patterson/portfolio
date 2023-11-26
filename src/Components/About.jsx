@@ -60,7 +60,7 @@ const About = ({ activeSection, darkMode }) => {
                 particularly enjoy bringing together innovation, aesthetics, and
                 functionality to build a web experience that will resonate with
                 the user. Please consider scrolling to see some of the recent
-                projects I've worked on!
+                projects I've worked on! np{' '}
               </p>
             </div>
             <div className='about-img' id='about-img'>

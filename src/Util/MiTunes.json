@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "desc": "Users can search for music and play a 30 second sample. Data is retrieved from the iTunes API."
+  },
+  {
+    "id": 2,
+    "desc": "Users have the option of searching by artist. Clicking on an artist runs another search for that artist's name."
+  },
+  {
+    "id": 3,
+    "desc": "Users can also refine their search by album. Clicking on an album will run another search for songs from that album."
+  },
+  {
+    "id": 4,
+    "desc": "Features both a light and dark mode, with similar hover effects, so the user can tailor the site to their liking."
+  }
+]

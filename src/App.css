@@ -735,13 +735,24 @@ section {
 
 .title-name {
   font-family: 'Montserrat', sans-serif;
-  font-size: 4.2em;
+  font-size: 4em;
   font-weight: normal;
   line-height: .8;
   color: var(--clr-dark);
   transform: scaleY(95%);
   margin: 0px 0px 0px 0px;
   text-align: center;
+}
+.mitunes-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4em;
+  font-weight: normal;
+  line-height: .8;
+  color: var(--clr-dark);
+  transform: scaleY(95%);
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+  letter-spacing: 3px;
 }
 
 .title-subtext {

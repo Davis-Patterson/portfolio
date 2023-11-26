@@ -4,6 +4,7 @@ import Nav from './Components/Nav';
 import Home from './Components/Home';
 import About from './Components/About';
 import MiniQuaist from './Components/Mini_Quaist';
+import MiTunes from './Components/MiTunes';
 import Questions from './Components/Questions';
 import Blackjack from './Components/Blackjack';
 import Colors from './Components/Colors';
@@ -63,6 +64,9 @@ function App() {
       </section>
       <section id='projects' data-project='miniQuaist'>
         <MiniQuaist activeProject={activeProject} darkMode={darkMode} />
+      </section>
+      <section id='projects' data-project='MiTunes'>
+        <MiTunes activeProject={activeProject} darkMode={darkMode} />
       </section>
       <section id='projects' data-project='questions'>
         <Questions activeProject={activeProject} darkMode={darkMode} />
