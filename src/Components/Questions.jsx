@@ -167,7 +167,7 @@ const Questions = ({ activeProject, darkMode }) => {
                 id='link-button'
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://mini-quaist.netlify.app/home'
+                href='https://lively-chimera-6dfe46.netlify.app/page/1'
               >
                 App
               </a>
@@ -176,7 +176,7 @@ const Questions = ({ activeProject, darkMode }) => {
                 id='link-button'
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://github.com/Davis-Patterson/Mini-QuAIst'
+                href='https://github.com/Davis-Patterson/questions-react'
               >
                 GitHub
               </a>
