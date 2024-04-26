@@ -19,7 +19,7 @@
     "react": "^18.2.0",
     "react-animated-progress-bar": "^1.1.2",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0",
+    "react-router-dom": "^6.23.0",
     "react-router-hash-link": "^2.4.3",
     "react-use-scrollspy": "^3.1.1",
     "use-local-storage-state": "^19.1.0"

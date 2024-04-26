@@ -11,7 +11,6 @@ import Colors from './Components/Colors';
 import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 import './App.css';
-import { dark } from '@mui/material/styles/createPalette';
 
 function App() {
   const [activeSection, setActiveSection] = useState(null);
