@@ -1,84 +1,74 @@
-import React from 'react';
-import { HashLink } from 'react-router-hash-link';
-import geometricTexture from '/src/assets/backgrounds/geometric-texture.jpg';
-import scrollLight from '/src/assets/home/scroll-light.gif';
-import scrollDark from '/src/assets/home/scroll-dark.gif';
+import React, { useState, useEffect } from 'react';
+import Hello from './Hello';
+import About from './About';
+import MiniQuaist from './Mini_Quaist';
+import MiTunes from './MiTunes';
+import Questions from './Questions';
+import Blackjack from './Blackjack';
+import Colors from './Colors';
+import Contact from './Contact';
 
-const Home = ({ activeSection, darkMode }) => {
-  const blueStyle = {
-    width: activeSection === 'home' ? '50px' : '200px',
-    opacity: activeSection === 'home' ? '100%' : '0%',
-  };
+function Home({ darkMode, activeSection, setActiveSection }) {
+  const [activeProject, setActiveProject] = useState(null);
 
-  const pageStyle = {
-    opacity: darkMode ? '15%' : '25%',
-  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+            setActiveProject(entry.target.dataset.project);
+          }
+        });
+      },
+      {
+        root: null,
+        threshold: 0.6,
+      }
+    );
+
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (activeSection) {
+      window.history.pushState(null, null, `#${activeSection}`);
+    }
+  }, [activeSection]);
 
   return (
     <>
-      <div className='home-container'>
-        <div className='page-img-container'>
-          <img
-            src={geometricTexture}
-            alt='background img'
-            className='page-img'
-            style={pageStyle}
-          />
-        </div>
-        <h1 className='hello-subtext' id='hello-subtext'>
-          Hello, my name is
-        </h1>
-        <h1 className='title-name' id='title-name'>
-          Davis Patterson
-        </h1>
-        <h1 className='title-subtext' id='title-subtext'>
-          Software developer seeking opportunities to leverage skills and
-          collaborate with industry professionals.
-        </h1>
-        <hr className='page-break-blue' style={blueStyle} id='about-blue' />
-        <HashLink
-          smooth
-          to='/#about'
-          className='home-projects-link'
-          id='about-link'
-        >
-          <div className='home-projects-button' id='about-button'>
-            About
-          </div>
-        </HashLink>
-        <HashLink
-          smooth
-          to='/#projects'
-          className='home-projects-link'
-          id='projects-link'
-        >
-          <div className='home-projects-button' id='projects-button'>
-            Projects
-          </div>
-        </HashLink>
-        <HashLink
-          smooth
-          to='/#contact'
-          className='home-projects-link'
-          id='contact-link'
-        >
-          <div className='home-projects-button' id='contact-button'>
-            Contact
-          </div>
-        </HashLink>
-        <div className='scroll-icon-container' id='scroll-icon-cont'>
-          <HashLink smooth to='/#about' className='scroll-link'>
-            <img
-              src={darkMode ? scrollDark : scrollLight}
-              alt='scroll icon'
-              className='scroll-icon'
-            />
-          </HashLink>
-        </div>
-        <div className='gap' />
-      </div>
+      <section id='hello' data-project='none'>
+        <Hello activeSection={activeSection} darkMode={darkMode} />
+      </section>
+      <section id='about' data-project='none'>
+        <About activeSection={activeSection} darkMode={darkMode} />
+      </section>
+      <section id='projects' data-project='miniQuaist'>
+        <MiniQuaist activeProject={activeProject} darkMode={darkMode} />
+      </section>
+      <section id='projects' data-project='MiTunes'>
+        <MiTunes activeProject={activeProject} darkMode={darkMode} />
+      </section>
+      <section id='projects' data-project='blackjack'>
+        <Blackjack activeProject={activeProject} darkMode={darkMode} />
+      </section>
+      <section id='projects' data-project='questions'>
+        <Questions activeProject={activeProject} darkMode={darkMode} />
+      </section>
+      <section id='projects' data-project='colors'>
+        <Colors activeProject={activeProject} darkMode={darkMode} />
+      </section>
+      <section id='contact' data-project='none'>
+        <Contact activeSection={activeSection} darkMode={darkMode} />
+      </section>
     </>
   );
-};
+}
 
 export default Home;

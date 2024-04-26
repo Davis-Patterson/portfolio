@@ -113,8 +113,8 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
             />
             <HashLink
               smooth
-              to='/#home'
-              className={`nav-button ${isActive('home') ? 'active' : ''}`}
+              to='/#hello'
+              className={`nav-button ${isActive('hello') ? 'active' : ''}`}
               id='home-button-nav'
             >
               Home
@@ -150,7 +150,7 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
             <div className='dropdown-box'>
               <HashLink
                 smooth
-                to='/#home'
+                to='/#hello'
                 onClick={handleDropdown}
                 className='dropdown-link'
               >
