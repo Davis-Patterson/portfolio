@@ -41,8 +41,8 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
   const menuIconRef = useRef(null);
 
   const blueStyle = {
-    width: activeProject === 'miniQuaist' ? '50px' : '200px',
-    opacity: activeProject === 'miniQuaist' ? '100%' : '0%',
+    width: activeProject === 'miniquaist' ? '50px' : '200px',
+    opacity: activeProject === 'miniquaist' ? '100%' : '0%',
   };
 
   const pageStyle = {
@@ -72,6 +72,10 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
       }, 200);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -150,7 +154,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
 
   return (
     <>
-      <div className='page-container'>
+      <div className='project-container'>
         <div className='page-img-container'>
           <img
             src={villageMap}

@@ -71,6 +71,10 @@ const Colors = ({ activeProject, darkMode }) => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     function handleClickOutside(event) {
       if (
         menuIconRef.current &&
@@ -147,7 +151,7 @@ const Colors = ({ activeProject, darkMode }) => {
 
   return (
     <>
-      <div className='page-container'>
+      <div className='project-container'>
         <div className='page-img-container'>
           <img
             src={Background}

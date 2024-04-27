@@ -35,6 +35,18 @@ const Projects = ({ darkMode, activeSection }) => {
           <Link to='miniquaist'>
             <div className=''>Mini Quaist</div>
           </Link>
+          <Link to='questions'>
+            <div className=''>Questions!</div>
+          </Link>
+          <Link to='blackjack'>
+            <div className=''>Blackjack</div>
+          </Link>
+          <Link to='MiTunes'>
+            <div className=''>MiTunes</div>
+          </Link>
+          <Link to='colors'>
+            <div className=''>Colors</div>
+          </Link>
         </div>
         <div className='gap' />
       </div>

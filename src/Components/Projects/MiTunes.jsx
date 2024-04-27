@@ -35,8 +35,8 @@ const MiTunes = ({ activeProject, darkMode }) => {
   const menuIconRef = useRef(null);
 
   const blueStyle = {
-    width: activeProject === 'MiTunes' ? '50px' : '200px',
-    opacity: activeProject === 'MiTunes' ? '100%' : '0%',
+    width: activeProject === 'mitunes' ? '50px' : '200px',
+    opacity: activeProject === 'mitunes' ? '100%' : '0%',
   };
 
   const pageStyle = {
@@ -66,6 +66,10 @@ const MiTunes = ({ activeProject, darkMode }) => {
       }, 200);
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -144,7 +148,7 @@ const MiTunes = ({ activeProject, darkMode }) => {
 
   return (
     <>
-      <div className='page-container'>
+      <div className='project-container'>
         <div className='page-img-container'>
           <img
             src={backgroundImg}
