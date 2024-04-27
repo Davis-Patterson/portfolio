@@ -1,21 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import backgroundImg from '/src/assets/mitunes/background.png';
-import Gif1 from '/src/assets/mitunes/gif1.gif';
-import Gif1Comp from '/src/assets/mitunes/gif1-comp.gif';
-import Img1 from '/src/assets/mitunes/img1.png';
-import Gif2 from '/src/assets/mitunes/gif2.gif';
-import Gif2Comp from '/src/assets/mitunes/gif2-comp.gif';
-import Img2 from '/src/assets/mitunes/img2.png';
-import Gif3 from '/src/assets/mitunes/gif3.gif';
-import Gif3Comp from '/src/assets/mitunes/gif3-comp.gif';
-import Img3 from '/src/assets/mitunes/img3.png';
-import Gif4 from '/src/assets/mitunes/gif4.gif';
-import Gif4Comp from '/src/assets/mitunes/gif4-comp.gif';
-import Img4 from '/src/assets/mitunes/img4.png';
-import descriptions from '/src/Util/MiTunes.json';
-import Progress from './Progress';
+import React, { useState, useEffect, useRef } from 'react';
+import Background from '/src/assets/questions/background.png';
+import Img1 from '/src/assets/questions/img1.png';
+import Img2 from '/src/assets/questions/img2.png';
+import Img3 from '/src/assets/questions/img3.png';
+import Img4 from '/src/assets/questions/img4.png';
+import Img5 from '/src/assets/questions/img5.png';
+import descriptions from '/src/Util/Questions.json';
+import Progress from '../Progress';
 
-const MiTunes = ({ activeProject, darkMode }) => {
+const Questions = ({ activeProject, darkMode }) => {
   const [activeClip, setActiveClip] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -24,16 +17,17 @@ const MiTunes = ({ activeProject, darkMode }) => {
 
   const [fade, setFade] = useState('in');
 
-  const gifs = [Gif1, Gif2, Gif3, Gif4];
-  const gifsComp = [Gif1Comp, Gif2Comp, Gif3Comp, Gif4Comp];
-  const imgs = [Img1, Img2, Img3, Img4];
+  const imgs = [Img1, Img2, Img3, Img4, Img5];
 
   const initialIndexValue = 1;
-  const lastClip = gifs.length;
+  const lastClip = imgs.length;
+
+  const zoomedRef = useRef(null);
+  const menuIconRef = useRef(null);
 
   const blueStyle = {
-    width: activeProject === 'MiTunes' ? '50px' : '200px',
-    opacity: activeProject === 'MiTunes' ? '100%' : '0%',
+    width: activeProject === 'questions' ? '50px' : '200px',
+    opacity: activeProject === 'questions' ? '100%' : '0%',
   };
 
   const pageStyle = {
@@ -63,6 +57,30 @@ const MiTunes = ({ activeProject, darkMode }) => {
       }, 200);
     }
   };
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        menuIconRef.current &&
+        (menuIconRef.current === event.target ||
+          menuIconRef.current.contains(event.target))
+      ) {
+        return;
+      }
+
+      if (zoomedRef.current && !zoomedRef.current.contains(event.target)) {
+        setZoomed(false);
+      }
+    }
+
+    if (zoomed) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [zoomed]);
 
   useEffect(() => {
     const progressTimer = setInterval(() => {
@@ -120,7 +138,7 @@ const MiTunes = ({ activeProject, darkMode }) => {
       <div className='page-container'>
         <div className='page-img-container'>
           <img
-            src={backgroundImg}
+            src={Background}
             alt='background img'
             className='page-img'
             style={pageStyle}
@@ -128,14 +146,14 @@ const MiTunes = ({ activeProject, darkMode }) => {
         </div>
         {zoomed && (
           <>
-            <div className='big-slideshow-container'>
-              {gifs.map(
-                (gifSrc, index) =>
+            <div ref={zoomedRef} className='big-slideshow-container'>
+              {imgs.map(
+                (imgSrc, index) =>
                   activeClip === index + 1 && (
                     <img
                       key={index}
-                      src={gifSrc}
-                      alt={`Rotating GIF ${index + 1}`}
+                      src={imgSrc}
+                      alt={`Rotating img ${index + 1}`}
                       className='big-slide-gifs'
                       onClick={handleZoomOut}
                     />
@@ -153,19 +171,20 @@ const MiTunes = ({ activeProject, darkMode }) => {
         )}
         {!zoomed && (
           <>
-            <div className='mitunes-name' id='mini-title'>
-              MiTunes
+            <div className='title-name' id='mini-title'>
+              Questions!
             </div>
             <hr className='mini-break-blue' style={blueStyle} />
             <div className='project-info' id='project-info'>
               <div className='desc-box' id='desc-box'>
                 <p className='mini-desc' id='mini-desc'>
-                  Music sampling platform. Uses the iTunes API to let users
-                  search for a piece of music and plays a 30 second sample.
-                  Users also have the option of refining their search, filtering
-                  by song, artist, or album. Developed independently using
-                  JavaScript. You can view the <em>'MiTunes!'</em> app or view
-                  the code repository here:
+                  Developed a Q&A platform, reminiscent of Stack Overflow, using
+                  React. Enables users to create accounts, engage in
+                  discussions, and view user profiles. Collaboratively
+                  pair-programmed in a duo, using agile practices. Played a
+                  pivotal role in UI/UX design and implementation. You can view
+                  the <em>'Questions!'</em> app or view the code repository
+                  here:
                 </p>
               </div>
             </div>
@@ -175,7 +194,7 @@ const MiTunes = ({ activeProject, darkMode }) => {
                 id='link-button'
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://main--mitunes-js.netlify.app/'
+                href='https://lively-chimera-6dfe46.netlify.app/page/1'
               >
                 App
               </a>
@@ -184,19 +203,19 @@ const MiTunes = ({ activeProject, darkMode }) => {
                 id='link-button'
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://github.com/Davis-Patterson/MiTunes-JavaScript'
+                href='https://github.com/Davis-Patterson/questions-react'
               >
                 GitHub
               </a>
             </div>
             <div className='slideshow-container' id='mini-slideshow-container'>
-              {gifsComp.map(
-                (gifSrc, index) =>
+              {imgs.map(
+                (imgSrc, index) =>
                   activeClip === index + 1 && (
                     <img
                       key={index}
-                      src={gifSrc}
-                      alt={`Rotating GIF ${index + 1}`}
+                      src={imgSrc}
+                      alt={`Rotating img ${index + 1}`}
                       className='slide-gifs'
                       onClick={handleZoomIn}
                     />
@@ -229,4 +248,4 @@ const MiTunes = ({ activeProject, darkMode }) => {
   );
 };
 
-export default MiTunes;
+export default Questions;

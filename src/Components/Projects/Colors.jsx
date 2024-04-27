@@ -1,21 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import Background from '/src/assets/blackjack/background.png';
-import Img1 from '/src/assets/blackjack/img1.png';
-import Gif1 from '/src/assets/blackjack/gif1.gif';
-import Gif1Comp from '/src/assets/blackjack/gif1-comp.gif';
-import Img2 from '/src/assets/blackjack/img2.png';
-import Gif2 from '/src/assets/blackjack/gif2.gif';
-import Gif2Comp from '/src/assets/blackjack/gif2-comp.gif';
-import Img3 from '/src/assets/blackjack/img3.png';
-import Gif3 from '/src/assets/blackjack/gif3.gif';
-import Gif3Comp from '/src/assets/blackjack/gif3-comp.gif';
-import Img4 from '/src/assets/blackjack/img4.png';
-import Gif4 from '/src/assets/blackjack/gif4.gif';
-import Gif4Comp from '/src/assets/blackjack/gif4-comp.gif';
-import descriptions from '/src/Util/Blackjack.json';
-import Progress from './Progress';
+import React, { useState, useEffect, useRef } from 'react';
+import Background from '/src/assets/colors/background.png';
+import Img1 from '/src/assets/colors/img1.png';
+import Gif1 from '/src/assets/colors/gif1.gif';
+import Gif1Comp from '/src/assets/colors/gif1-comp.gif';
+import Img2 from '/src/assets/colors/img2.png';
+import Gif2 from '/src/assets/colors/gif2.gif';
+import Gif2Comp from '/src/assets/colors/gif2-comp.gif';
+import Img3 from '/src/assets/colors/img3.png';
+import Gif3 from '/src/assets/colors/gif3.gif';
+import Gif3Comp from '/src/assets/colors/gif3-comp.gif';
+import Img4 from '/src/assets/colors/img4.png';
+import Gif4 from '/src/assets/colors/gif4.gif';
+import Gif4Comp from '/src/assets/colors/gif4-comp.gif';
+import Img5 from '/src/assets/colors/img5.png';
+import Gif5 from '/src/assets/colors/gif5.gif';
+import Gif5Comp from '/src/assets/colors/gif5-comp.gif';
+import descriptions from '/src/Util/Colors.json';
+import Progress from '../Progress';
 
-const Blackjack = ({ activeProject, darkMode }) => {
+const Colors = ({ activeProject, darkMode }) => {
   const [activeClip, setActiveClip] = useState(1);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -24,16 +27,19 @@ const Blackjack = ({ activeProject, darkMode }) => {
 
   const [fade, setFade] = useState('in');
 
-  const gifs = [Gif1, Gif2, Gif3, Gif4];
-  const gifsComp = [Gif1Comp, Gif2Comp, Gif3Comp, Gif4Comp];
-  const imgs = [Img1, Img2, Img3, Img4];
+  const gifs = [Gif1, Gif2, Gif3, Gif4, Gif5];
+  const gifsComp = [Gif1Comp, Gif2Comp, Gif3Comp, Gif4Comp, Gif5Comp];
+  const imgs = [Img1, Img2, Img3, Img4, Img5];
 
   const initialIndexValue = 1;
   const lastClip = imgs.length;
 
+  const zoomedRef = useRef(null);
+  const menuIconRef = useRef(null);
+
   const blueStyle = {
-    width: activeProject === 'blackjack' ? '50px' : '200px',
-    opacity: activeProject === 'blackjack' ? '100%' : '0%',
+    width: activeProject === 'colors' ? '50px' : '200px',
+    opacity: activeProject === 'colors' ? '100%' : '0%',
   };
 
   const pageStyle = {
@@ -63,6 +69,30 @@ const Blackjack = ({ activeProject, darkMode }) => {
       }, 200);
     }
   };
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        menuIconRef.current &&
+        (menuIconRef.current === event.target ||
+          menuIconRef.current.contains(event.target))
+      ) {
+        return;
+      }
+
+      if (zoomedRef.current && !zoomedRef.current.contains(event.target)) {
+        setZoomed(false);
+      }
+    }
+
+    if (zoomed) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [zoomed]);
 
   useEffect(() => {
     const progressTimer = setInterval(() => {
@@ -128,7 +158,7 @@ const Blackjack = ({ activeProject, darkMode }) => {
         </div>
         {zoomed && (
           <>
-            <div className='big-slideshow-container'>
+            <div ref={zoomedRef} className='big-slideshow-container'>
               {gifs.map(
                 (gifSrc, index) =>
                   activeClip === index + 1 && (
@@ -154,18 +184,17 @@ const Blackjack = ({ activeProject, darkMode }) => {
         {!zoomed && (
           <>
             <div className='title-name' id='black-title'>
-              Blackjack
+              Colors
             </div>
             <hr className='mini-break-blue' style={blueStyle} />
             <div className='project-info' id='black-project-info'>
               <div className='desc-box' id='black-desc-box'>
                 <p className='mini-desc' id='black-desc'>
-                  Python implementation of the classic Blackjack game, played in
-                  a command-line interface against the computer. Follows the
-                  standard rules of the game and features betting and card
-                  counting. Developed independently with object oriented
-                  programming principles. You can view the <em>Blackjack</em>{' '}
-                  code here:
+                  Developed a color palette application, reminiscent of
+                  Coolers.com, using React. Enables users to quickly create
+                  color palettes with up to 10 randomly generated hexcode colors
+                  and modify their hues if desired. Developed independently. You
+                  can view the <em>'Colors!'</em> code here:
                 </p>
               </div>
             </div>
@@ -175,7 +204,7 @@ const Blackjack = ({ activeProject, darkMode }) => {
                 id='link-button'
                 target='_blank'
                 rel='noopener noreferrer'
-                href='https://github.com/Davis-Patterson/blackjack-python-oop'
+                href='https://github.com/Davis-Patterson/colors-react'
               >
                 GitHub
               </a>
@@ -220,4 +249,4 @@ const Blackjack = ({ activeProject, darkMode }) => {
   );
 };
 
-export default Blackjack;
+export default Colors;

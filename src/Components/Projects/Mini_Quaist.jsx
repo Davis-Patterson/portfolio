@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import villageMap from '/src/assets/backgrounds/village-map.png';
 import Gif1 from '/src/assets/mini-quaist/gif1.gif';
 import Gif1Comp from '/src/assets/mini-quaist/gif1-comp.gif';
@@ -19,7 +19,7 @@ import Gif6 from '/src/assets/mini-quaist/gif6.gif';
 import Gif6Comp from '/src/assets/mini-quaist/gif6-comp.gif';
 import Img6 from '/src/assets/mini-quaist/img6.png';
 import descriptions from '/src/Util/MiniQuaist.json';
-import Progress from './Progress';
+import Progress from '../Progress';
 
 const MiniQuaist = ({ activeProject, darkMode }) => {
   const [activeClip, setActiveClip] = useState(1);
@@ -36,6 +36,9 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
 
   const initialIndexValue = 1;
   const lastClip = gifs.length;
+
+  const zoomedRef = useRef(null);
+  const menuIconRef = useRef(null);
 
   const blueStyle = {
     width: activeProject === 'miniQuaist' ? '50px' : '200px',
@@ -69,6 +72,30 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
       }, 200);
     }
   };
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        menuIconRef.current &&
+        (menuIconRef.current === event.target ||
+          menuIconRef.current.contains(event.target))
+      ) {
+        return;
+      }
+
+      if (zoomedRef.current && !zoomedRef.current.contains(event.target)) {
+        setZoomed(false);
+      }
+    }
+
+    if (zoomed) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [zoomed]);
 
   useEffect(() => {
     const progressTimer = setInterval(() => {
@@ -134,7 +161,7 @@ const MiniQuaist = ({ activeProject, darkMode }) => {
         </div>
         {zoomed && (
           <>
-            <div className='big-slideshow-container'>
+            <div ref={zoomedRef} className='big-slideshow-container'>
               {gifs.map(
                 (gifSrc, index) =>
                   activeClip === index + 1 && (
