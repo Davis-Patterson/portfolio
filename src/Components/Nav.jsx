@@ -66,7 +66,7 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
       <nav className='nav-container'>
         <div className='nav-contents'>
           <div className='home-button-container'>
-            <HashLink smooth to='/#home' className='home-button'>
+            <HashLink smooth to='/#hello' className='home-button'>
               <img
                 src={headshotIcon}
                 alt='headshot logo'
