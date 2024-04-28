@@ -3,10 +3,6 @@ import Nav from './Nav';
 import Hello from './Hello';
 import About from './About';
 import Projects from './Projects';
-import MiTunes from './Projects/MiTunes';
-import Questions from './Projects/Questions';
-import Blackjack from './Projects/Blackjack';
-import Colors from './Projects/Colors';
 import Contact from './Contact';
 
 function Home({ darkMode, activeSection, setActiveSection, setActiveProject }) {

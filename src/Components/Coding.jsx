@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Background from '/src/assets/projects/vscode-blur.png';
 import MiniquaistImg from '/src/assets/mini-quaist/img2.png';
@@ -9,13 +9,17 @@ import ColorsImg from '/src/assets/colors/img1.png';
 
 const Coding = ({ darkMode, activeSection }) => {
   const blueStyle = {
-    width: activeSection === 'projects' ? '50px' : '200px',
-    opacity: activeSection === 'projects' ? '100%' : '0%',
+    width: activeSection === 'development' ? '50px' : '200px',
+    opacity: activeSection === 'development' ? '100%' : '0%',
   };
 
   const pageStyle = {
     opacity: darkMode ? '15%' : '30%',
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -37,54 +41,54 @@ const Coding = ({ darkMode, activeSection }) => {
             View some of my recent work here
           </p>
         </div>
-        <div className='project-page-project-container'>
+        <div className='landing-page-project-container'>
           <div className='coding-project-container'>
-            <Link to='miniquaist'>
+            <Link to='/miniquaist' className='landing-link'>
               <div className='project-page-item'>
                 <img
                   src={MiniquaistImg}
                   alt='miniquaist image'
-                  className='project-page-item-image'
+                  className='landing-page-item-image'
                 />
                 <p className='project-page-item-text'>Mini Quaist</p>
               </div>
             </Link>
-            <Link to='questions'>
+            <Link to='/questions' className='landing-link'>
               <div className='project-page-item'>
                 <img
                   src={QuestionsImg}
                   alt='questions image'
-                  className='project-page-item-image'
+                  className='landing-page-item-image'
                 />
                 <div className='project-page-item-text'>Questions!</div>
               </div>
             </Link>
-            <Link to='blackjack'>
+            <Link to='/blackjack' className='landing-link'>
               <div className='project-page-item'>
                 <img
                   src={BlackjackImg}
                   alt='blackjack image'
-                  className='project-page-item-image'
+                  className='landing-page-item-image'
                 />
                 <div className='project-page-item-text'>Blackjack</div>
               </div>
             </Link>
-            <Link to='MiTunes'>
+            <Link to='/MiTunes' className='landing-link'>
               <div className='project-page-item'>
                 <img
                   src={MitunesImg}
                   alt='mitunes image'
-                  className='project-page-item-image'
+                  className='landing-page-item-image'
                 />
                 <div className='project-page-item-text'>MiTunes</div>
               </div>
             </Link>
-            <Link to='colors'>
+            <Link to='/colors' className='landing-link'>
               <div className='project-page-item'>
                 <img
                   src={ColorsImg}
                   alt='colors image'
-                  className='project-page-item-image'
+                  className='landing-page-item-image'
                 />
                 <div className='project-page-item-text'>Colors</div>
               </div>

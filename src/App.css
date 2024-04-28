@@ -24,6 +24,7 @@
   --clr-accent: #20bcfa;
   --clr-accent-light: #68dcff;
   --clr-accent-dark: #1171ca;
+  --clr-accent-faded: #2ac0fc7e;
   --clr-back: #9e9e9e;
   --clr-text: #505050;
   --clr-white: #fff;
@@ -42,6 +43,7 @@
   --clr-accent: #2cb0ec;
   --clr-accent-light: #68dcff;
   --clr-accent-dark: #2091fa;
+  --clr-accent-faded: #1bbdfd5e;
   --clr-back: #9e9e9e;
   --clr-text: #c4c4c4;
   --clr-white: #fff;
@@ -860,20 +862,22 @@ section {
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
 }
-.project-container {
+.project-container,
+.landing-page-container {
   margin: 65px 0px 0px 0px;
   padding: 50px 0px 50px 0px;
+  min-height: calc(100vh - 65px);
 }
-.landing-page-container {
-  margin: 0px 0px 0px 0px;
-  padding: 50px 0px 50px 0px;
+.page-container,
+.home-container,
+.project-page-container {
+  min-height: 800px;
 }
 .page-container,
 .home-container,
 .project-container,
 .project-page-container,
 .landing-page-container {
-  min-height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -909,7 +913,8 @@ section {
   z-index: -20;
 }
 
-.project-page-project-container {
+.project-page-project-container,
+.landing-page-project-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -918,25 +923,44 @@ section {
 
 .coding-project-container,
 .gd-project-container {
-  width: 90%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  /* flex-direction: column; */
+  width: 100%;
+}
+
+.coding-link,
+.design-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
+}
+
+.landing-link {
+  margin: 5px 10px 5px 10px;
+  padding: 10px 5px 10px 5px;
+}
+.landing-link:hover,
+.coding-link:hover,
+.design-link:hover {
+  background-color: var(--clr-accent-faded);
 }
 
 .project-page-subtitle {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.4em;
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.8;
-  margin: 10px 0px 40px 0px;
+  color: var(--clr-dark);
+  margin: 10px 0px 20px 0px;
 }
 
 .project-page-item {
   /* border: 1px solid var(--clr-dark); */
-  margin: 5px 10px 5px 10px;
-  padding: 10px 5px 10px 5px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -944,6 +968,11 @@ section {
 }
 
 .project-page-item-image {
+  width: 450px;
+  margin: 5px 5px 0px 5px;
+}
+
+.landing-page-item-image {
   width: 200px;
   margin: 5px 5px 0px 5px;
 }

@@ -5,7 +5,7 @@ import MiniquaistImg from '/src/assets/mini-quaist/img2.png';
 import QuestionsImg from '/src/assets/questions/img1.png';
 import BlackjackImg from '/src/assets/blackjack/img1.png';
 import MitunesImg from '/src/assets/mitunes/img1.png';
-import ColorsImg from '/src/assets/colors/img1.png';
+import robynrobyns from '/src/assets/projects/robynrobynsimg.png';
 
 const Projects = ({ darkMode, activeSection }) => {
   const blueStyle = {
@@ -38,12 +38,26 @@ const Projects = ({ darkMode, activeSection }) => {
           </p>
         </div>
         <div className='project-page-project-container'>
-          <div className='coding-project-container'>
-            <p className='project-page-subtitle'>SOFTWARE DEVELOPMENT</p>
-          </div>
-          <div className='gd-project-container'>
-            <p className='project-page-subtitle'>GRAPHIC DESIGN</p>
-          </div>
+          <Link to='/development' className='coding-link'>
+            <div className='coding-project-container'>
+              <p className='project-page-subtitle'>SOFTWARE DEVELOPMENT</p>
+              <img
+                src={MiniquaistImg}
+                alt='software development image'
+                className='project-page-item-image'
+              />
+            </div>
+          </Link>
+          <Link to='/design' className='design-link'>
+            <div className='gd-project-container'>
+              <p className='project-page-subtitle'>GRAPHIC DESIGN</p>
+              <img
+                src={robynrobyns}
+                alt='graphic design image'
+                className='project-page-item-image'
+              />
+            </div>
+          </Link>
         </div>
         <div className='gap' />
       </div>

@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import RobynRobyns from '/src/assets/projects/robynrobynsimg.png';
+import Background from '/src/assets/projects/vscode-blur.png';
 
 const Design = ({ darkMode, activeSection }) => {
   const blueStyle = {
-    width: activeSection === 'projects' ? '50px' : '200px',
-    opacity: activeSection === 'projects' ? '100%' : '0%',
+    width: activeSection === 'design' ? '50px' : '200px',
+    opacity: activeSection === 'design' ? '100%' : '0%',
   };
 
   const pageStyle = {
     opacity: darkMode ? '15%' : '30%',
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -32,27 +37,26 @@ const Design = ({ darkMode, activeSection }) => {
             View some of my recent work here
           </p>
         </div>
-        <div className='project-page-project-container'>
+        <div className='landing-page-project-container'>
           <div className='gd-project-container'>
-            <p className='project-page-subtitle'>GRAPHIC DESIGN</p>
-            <Link to='/#hello'>
+            <Link to='/#hello' className='landing-link'>
               <div className='project-page-item'>
                 <img
                   src={RobynRobyns}
                   alt='Robyn Robyns image'
-                  className='project-page-item-image'
+                  className='landing-page-item-image'
                 />
                 <div className='project-page-item-text'>
                   Robyn Robyn's Services
                 </div>
               </div>
             </Link>
-            <Link to='/#hello'>
+            <Link to='/#hello' className='landing-link'>
               <div className='project-page-item'>
                 <img
-                  src={null}
+                  src={RobynRobyns}
                   alt='Retro Judah image'
-                  className='project-page-item-image'
+                  className='landing-page-item-image'
                 />
                 <div className='project-page-item-text'>Retro Judah</div>
               </div>

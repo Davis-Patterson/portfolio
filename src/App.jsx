@@ -21,7 +21,8 @@ function App() {
 
   useEffect(() => {
     const path = location.pathname.replace('/', '');
-    setActiveProject(path || 'home');
+    setActiveProject(path || 'hello');
+    setActiveSection(path || 'hello');
   }, [location]);
 
   return (
