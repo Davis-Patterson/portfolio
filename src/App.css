@@ -741,6 +741,16 @@ section {
   margin: 0px 0px 0px 0px;
   text-align: center;
 }
+.sd-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5em;
+  font-weight: normal;
+  line-height: 0.8;
+  color: var(--clr-dark);
+  /* transform: scaleY(95%); */
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+}
 .mitunes-name {
   font-family: 'Montserrat', sans-serif;
   font-size: 4em;
@@ -844,7 +854,8 @@ section {
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
 }
-.page-container {
+.page-container,
+.project-page-container {
   height: calc(100vh - 65px);
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
@@ -853,9 +864,15 @@ section {
   margin: 65px 0px 0px 0px;
   padding: 50px 0px 50px 0px;
 }
+.landing-page-container {
+  margin: 0px 0px 0px 0px;
+  padding: 50px 0px 50px 0px;
+}
 .page-container,
 .home-container,
-.project-container {
+.project-container,
+.project-page-container,
+.landing-page-container {
   min-height: 800px;
   display: flex;
   justify-content: center;
@@ -890,6 +907,54 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   z-index: -20;
+}
+
+.project-page-project-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.coding-project-container,
+.gd-project-container {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-page-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+  font-weight: 900;
+  line-height: 0.8;
+  margin: 10px 0px 40px 0px;
+}
+
+.project-page-item {
+  /* border: 1px solid var(--clr-dark); */
+  margin: 5px 10px 5px 10px;
+  padding: 10px 5px 10px 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-page-item-image {
+  width: 200px;
+  margin: 5px 5px 0px 5px;
+}
+
+.project-page-item-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 0.8;
+  color: var(--clr-dark);
+  margin: 10px 5px 0px 5px;
 }
 
 .gap {

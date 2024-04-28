@@ -4,6 +4,8 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './Components/Nav';
 import Home from './Components/Home';
 import Footer from './Components/Footer';
+import Coding from './Components/Coding';
+import Design from './Components/Design';
 import MiniQuaist from './Components/Projects/Mini_Quaist';
 import Blackjack from './Components/Projects/Blackjack';
 import Colors from './Components/Projects/Colors';
@@ -41,6 +43,14 @@ function App() {
               setActiveProject={setActiveProject}
             />
           }
+        />
+        <Route
+          path='/development'
+          element={<Coding darkMode={darkMode} activeSection={activeSection} />}
+        />
+        <Route
+          path='/design'
+          element={<Design darkMode={darkMode} activeSection={activeSection} />}
         />
         <Route
           path='/miniquaist'
