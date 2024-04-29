@@ -6,8 +6,8 @@ import scrollDark from '/src/assets/home/scroll-dark.gif';
 
 const Hello = ({ activeSection, darkMode }) => {
   const blueStyle = {
-    width: activeSection === 'hello' ? '50px' : '200px',
-    opacity: activeSection === 'hello' ? '100%' : '0%',
+    width: activeSection === 'home' ? '50px' : '200px',
+    opacity: activeSection === 'home' ? '100%' : '0%',
   };
 
   const pageStyle = {

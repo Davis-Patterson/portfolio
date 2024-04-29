@@ -921,6 +921,15 @@ section {
   flex-direction: row;
 }
 
+.coding-link,
+.design-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
+  margin: 0px 0px 20px 0px;
+}
 .coding-project-container,
 .gd-project-container {
   display: flex;
@@ -929,15 +938,7 @@ section {
   justify-content: center;
   /* flex-direction: column; */
   width: 100%;
-}
-
-.coding-link,
-.design-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 45%;
+  padding: 20px;
 }
 
 .landing-link {

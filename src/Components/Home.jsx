@@ -38,7 +38,7 @@ function Home({ darkMode, activeSection, setActiveSection, setActiveProject }) {
 
   return (
     <>
-      <section id='hello' data-project='none'>
+      <section id='home' data-project='none'>
         <Hello activeSection={activeSection} darkMode={darkMode} />
       </section>
       <section id='about' data-project='none'>

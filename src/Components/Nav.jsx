@@ -66,7 +66,7 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
       <nav className='nav-container'>
         <div className='nav-contents'>
           <div className='home-button-container'>
-            <HashLink smooth to='/#hello' className='home-button'>
+            <HashLink smooth to='/#home' className='home-button'>
               <img
                 src={headshotIcon}
                 alt='headshot logo'
@@ -113,8 +113,8 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
             />
             <HashLink
               smooth
-              to='/#hello'
-              className={`nav-button ${isActive('hello') ? 'active' : ''}`}
+              to='/#home'
+              className={`nav-button ${isActive('home') ? 'active' : ''}`}
               id='home-button-nav'
             >
               Home

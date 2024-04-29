@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import RobynRobyns from '/src/assets/projects/robynrobynsimg.png';
+import RobynRobyns1 from '/src/assets/gd/robynrobynsimg1.png';
+import RJoverlay from '/src/assets/gd/RJoverlay.png';
+import RJcountdown from '/src/assets/gd/RJcountdown.png';
 import Background from '/src/assets/projects/vscode-blur.png';
 
 const Design = ({ darkMode, activeSection }) => {
@@ -39,10 +41,10 @@ const Design = ({ darkMode, activeSection }) => {
         </div>
         <div className='landing-page-project-container'>
           <div className='gd-project-container'>
-            <Link to='/#hello' className='landing-link'>
+            <Link to='/#home' className='landing-link'>
               <div className='project-page-item'>
                 <img
-                  src={RobynRobyns}
+                  src={RobynRobyns1}
                   alt='Robyn Robyns image'
                   className='landing-page-item-image'
                 />
@@ -51,10 +53,10 @@ const Design = ({ darkMode, activeSection }) => {
                 </div>
               </div>
             </Link>
-            <Link to='/#hello' className='landing-link'>
+            <Link to='/#home' className='landing-link'>
               <div className='project-page-item'>
                 <img
-                  src={RobynRobyns}
+                  src={RJcountdown}
                   alt='Retro Judah image'
                   className='landing-page-item-image'
                 />
