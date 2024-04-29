@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Background from '/src/assets/Ghibli/background.png';
-import Img1 from '/src/assets/Ghibli/img1.png';
-import Gif1 from '/src/assets/Ghibli/gif1.gif';
-import Gif1Comp from '/src/assets/Ghibli/gif1-comp.gif';
-import Img2 from '/src/assets/Ghibli/img2.png';
-import Gif2 from '/src/assets/Ghibli/gif2.gif';
-import Gif2Comp from '/src/assets/Ghibli/gif2-comp.gif';
-import Img3 from '/src/assets/Ghibli/img3.png';
-import Gif3 from '/src/assets/Ghibli/gif3.gif';
-import Gif3Comp from '/src/assets/Ghibli/gif3-comp.gif';
-import Img4 from '/src/assets/Ghibli/img4.png';
-import Gif4 from '/src/assets/Ghibli/gif4.gif';
-import Gif4Comp from '/src/assets/Ghibli/gif4-comp.gif';
-import descriptions from '/src/Util/Ghibli.json';
+import Background from '/src/assets/ghibli/background.png';
+import Img1 from '/src/assets/ghibli/img1.png';
+import Gif1 from '/src/assets/ghibli/gif1.gif';
+import Gif1Comp from '/src/assets/ghibli/gif1-comp.gif';
+import Img2 from '/src/assets/ghibli/img2.png';
+import Gif2 from '/src/assets/ghibli/gif2.gif';
+import Gif2Comp from '/src/assets/ghibli/gif2-comp.gif';
+import Img3 from '/src/assets/ghibli/img3.png';
+import Gif3 from '/src/assets/ghibli/gif3.gif';
+import Gif3Comp from '/src/assets/ghibli/gif3-comp.gif';
+import Img4 from '/src/assets/ghibli/img4.png';
+import Gif4 from '/src/assets/ghibli/gif4.gif';
+import Gif4Comp from '/src/assets/ghibli/gif4-comp.gif';
+import descriptions from '/src/Util/ghibli.json';
 import Progress from '../Progress';
 
 const Ghibli = ({ activeProject, darkMode }) => {

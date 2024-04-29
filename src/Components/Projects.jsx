@@ -19,9 +19,9 @@ import RJbrbGif from '/src/assets/gd/RJbrb-comp.gif';
 import MXcountdownGif from '/src/assets/gd/MXcountdown-comp.gif';
 import MXoverlayGif from '/src/assets/gd/MXoverlay-comp.gif';
 import MXintermissionGif from '/src/assets/gd/MXintermission-comp.gif';
-import GhibliGif1 from '/src/assets/Ghibli/gif1-comp.gif';
-import GhibliGif2 from '/src/assets/Ghibli/gif2-comp.gif';
-import GhibliGif3 from '/src/assets/Ghibli/gif3-comp.gif';
+import GhibliGif1 from '/src/assets/ghibli/gif1-comp.gif';
+import GhibliGif2 from '/src/assets/ghibli/gif2-comp.gif';
+import GhibliGif3 from '/src/assets/ghibli/gif3-comp.gif';
 
 const Projects = ({ darkMode, activeSection }) => {
   const [activeSDClip, setActiveSDClip] = useState(1);
