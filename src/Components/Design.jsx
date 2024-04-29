@@ -90,7 +90,7 @@ const Design = ({ darkMode, activeSection }) => {
           </p>
         </div>
         <div className='landing-page-project-container'>
-          <div className='gd-project-container'>
+          <div className='landing-project-container'>
             <Link to='robynrobyns' className='landing-link'>
               <div className='project-page-item'>
                 {RRMedia.map((src, index) => (

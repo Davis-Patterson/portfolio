@@ -156,7 +156,7 @@ const Coding = ({ darkMode, activeSection }) => {
           </p>
         </div>
         <div className='landing-page-project-container'>
-          <div className='coding-project-container'>
+          <div className='landing-project-container'>
             <Link to='miniquaist' className='landing-link'>
               <div className='project-page-item'>
                 {MQMedia.map((src, index) => (
