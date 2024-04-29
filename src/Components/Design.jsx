@@ -91,7 +91,7 @@ const Design = ({ darkMode, activeSection }) => {
         </div>
         <div className='landing-page-project-container'>
           <div className='gd-project-container'>
-            <Link to='/robynrobyns' className='landing-link'>
+            <Link to='robynrobyns' className='landing-link'>
               <div className='project-page-item'>
                 {RRMedia.map((src, index) => (
                   <img
@@ -109,7 +109,7 @@ const Design = ({ darkMode, activeSection }) => {
                 </div>
               </div>
             </Link>
-            <Link to='/retrojudah' className='landing-link'>
+            <Link to='retrojudah' className='landing-link'>
               <div className='project-page-item'>
                 {RJMedia.map((src, index) => (
                   <img
@@ -125,7 +125,7 @@ const Design = ({ darkMode, activeSection }) => {
                 <div className='project-page-item-text'>Retro Judah</div>
               </div>
             </Link>
-            <Link to='/mexikaner' className='landing-link'>
+            <Link to='mexikaner' className='landing-link'>
               <div className='project-page-item'>
                 {MXMedia.map((src, index) => (
                   <img

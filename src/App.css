@@ -115,7 +115,7 @@ section {
   /* min-height: calc(100vh - 65px); */
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   #home-button-nav {
     margin: 0px 15px 0px 15px;
   }
@@ -173,8 +173,12 @@ section {
     justify-content: center;
     align-items: center;
   }
-  #about-title {
+  #about-title,
+  #projects-title {
     font-size: 3.2em;
+  }
+  #projects-title {
+    padding-top: 20px;
   }
   #about-img {
     display: none;
@@ -187,6 +191,9 @@ section {
   }
   #about-desc-box {
     width: 95%;
+  }
+  #project-page-item-image {
+    width: 350px;
   }
   #mini-title {
     font-size: 3.2em;
@@ -276,6 +283,31 @@ section {
   }
 }
 
+@media screen and (max-width: 820px) {
+  #project-page-project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #projects-subtitle {
+    margin: 0px 0px 20px 0px;
+    font-size: 1.4em;
+  }
+  #coding-project-container,
+  #gd-project-container {
+    padding: 5px 0px 10px 0px;
+  }
+  #projects-subtitle-container {
+    display: none;
+  }
+  #projects-break-blue {
+    margin: 20px 0px 20px 0px;
+  }
+  #coding-link,
+  #design-link {
+    width: 60%;
+  }
+}
+
 @media screen and (max-width: 760px) {
   .nav-button {
     display: none;
@@ -299,6 +331,13 @@ section {
   }
   #about-socials-title {
     font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #coding-link,
+  #design-link {
+    width: 80%;
   }
 }
 
@@ -371,7 +410,8 @@ section {
     justify-content: center;
     align-items: center;
   }
-  #about-title {
+  #about-title,
+  #projects-title {
     font-size: 2.8em;
   }
   #about-blue {
@@ -423,6 +463,10 @@ section {
   }
   #about-socials-title {
     font-size: 1.2rem;
+  }
+  #coding-link,
+  #design-link {
+    width: 90%;
   }
   #mini-desc {
     width: 90%;
@@ -1043,7 +1087,8 @@ section {
   margin: 10px;
 }
 
-.page-break-blue {
+.page-break-blue,
+.projects-break-blue {
   border: none;
   height: 2px;
   background-color: var(--clr-accent);
@@ -1124,7 +1169,8 @@ section {
 }
 
 .skills-title,
-.recent-work {
+.recent-work,
+.project-subtitle {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8em;
   font-weight: 500;
@@ -1499,13 +1545,17 @@ section {
   transition: 0.8s;
 }
 
-.contact-socials-container {
+.contact-socials-container,
+.projects-subtitle-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 50%;
   margin: 0px 0px 30px 0px;
+}
+
+.projects-subtitle {
 }
 
 .contact-socials {

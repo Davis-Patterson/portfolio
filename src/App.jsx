@@ -58,49 +58,49 @@ function App() {
           element={<Design darkMode={darkMode} activeSection={activeSection} />}
         />
         <Route
-          path='/miniquaist'
+          path='development/miniquaist'
           element={
             <MiniQuaist activeProject={activeProject} darkMode={darkMode} />
           }
         />
         <Route
-          path='/ghibli'
+          path='development/ghibli'
           element={<Ghibli activeProject={activeProject} darkMode={darkMode} />}
         />
         <Route
-          path='/questions'
+          path='development/questions'
           element={
             <Questions activeProject={activeProject} darkMode={darkMode} />
           }
         />
         <Route
-          path='/blackjack'
+          path='development/blackjack'
           element={
             <Blackjack activeProject={activeProject} darkMode={darkMode} />
           }
         />
         <Route
-          path='/mitunes'
+          path='development/mitunes'
           element={
             <MiTunes activeProject={activeProject} darkMode={darkMode} />
           }
         />
         <Route
-          path='/colors'
+          path='development/colors'
           element={<Colors activeProject={activeProject} darkMode={darkMode} />}
         />
         <Route
-          path='/robynrobyns'
+          path='design/robynrobyns'
           element={<Robyn activeProject={activeProject} darkMode={darkMode} />}
         />
         <Route
-          path='/retrojudah'
+          path='design/retrojudah'
           element={
             <Retro_Judah activeProject={activeProject} darkMode={darkMode} />
           }
         />
         <Route
-          path='/mexikaner'
+          path='design/mexikaner'
           element={
             <Mexikaner activeProject={activeProject} darkMode={darkMode} />
           }

@@ -157,7 +157,7 @@ const Coding = ({ darkMode, activeSection }) => {
         </div>
         <div className='landing-page-project-container'>
           <div className='coding-project-container'>
-            <Link to='/miniquaist' className='landing-link'>
+            <Link to='miniquaist' className='landing-link'>
               <div className='project-page-item'>
                 {MQMedia.map((src, index) => (
                   <img
@@ -173,7 +173,7 @@ const Coding = ({ darkMode, activeSection }) => {
                 <div className='project-page-item-text'>Mini QuAIst</div>
               </div>
             </Link>
-            <Link to='/ghibli' className='landing-link'>
+            <Link to='ghibli' className='landing-link'>
               <div className='project-page-item'>
                 {SGMedia.map((src, index) => (
                   <img
@@ -189,7 +189,7 @@ const Coding = ({ darkMode, activeSection }) => {
                 <div className='project-page-item-text'>Studio Ghibli</div>
               </div>
             </Link>
-            <Link to='/blackjack' className='landing-link'>
+            <Link to='blackjack' className='landing-link'>
               <div className='project-page-item'>
                 {BJMedia.map((src, index) => (
                   <img
@@ -205,7 +205,7 @@ const Coding = ({ darkMode, activeSection }) => {
                 <div className='project-page-item-text'>Blackjack</div>
               </div>
             </Link>
-            <Link to='/questions' className='landing-link'>
+            <Link to='questions' className='landing-link'>
               <div className='project-page-item'>
                 {QSMedia.map((src, index) => (
                   <img
@@ -221,7 +221,7 @@ const Coding = ({ darkMode, activeSection }) => {
                 <div className='project-page-item-text'>Questions!</div>
               </div>
             </Link>
-            <Link to='/colors' className='landing-link'>
+            <Link to='colors' className='landing-link'>
               <div className='project-page-item'>
                 {CLMedia.map((src, index) => (
                   <img
@@ -237,7 +237,7 @@ const Coding = ({ darkMode, activeSection }) => {
                 <div className='project-page-item-text'>Colors</div>
               </div>
             </Link>
-            <Link to='/MiTunes' className='landing-link'>
+            <Link to='mitunes' className='landing-link'>
               <div className='project-page-item'>
                 {MTMedia.map((src, index) => (
                   <img

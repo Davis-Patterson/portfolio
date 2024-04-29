@@ -103,18 +103,31 @@ const Projects = ({ darkMode, activeSection }) => {
             style={pageStyle}
           />
         </div>
-        <h1 className='title-name' id='about-title'>
+        <h1 className='title-name' id='projects-title'>
           Projects
         </h1>
-        <hr className='page-break-blue' style={blueStyle} />
-        <div className='contact-socials-container'>
-          <p className='recent-work' id='skills-title'>
+        <hr
+          className='projects-break-blue'
+          id='projects-break-blue'
+          style={blueStyle}
+        />
+        <div
+          className='projects-subtitle-container'
+          id='projects-subtitle-container'
+        >
+          <p className='recent-work' id='projects-subtitle'>
             View some of my recent work here
           </p>
         </div>
-        <div className='project-page-project-container'>
-          <Link to='/development' className='coding-link'>
-            <div className='coding-project-container'>
+        <div
+          className='project-page-project-container'
+          id='project-page-project-container'
+        >
+          <Link to='/development' className='coding-link' id='coding-link'>
+            <div
+              className='coding-project-container'
+              id='coding-project-container'
+            >
               <p className='project-page-subtitle'>SOFTWARE DEVELOPMENT</p>
               {SDMedia.map((src, index) => (
                 <img
@@ -122,6 +135,7 @@ const Projects = ({ darkMode, activeSection }) => {
                   src={src}
                   alt={`Rotating media ${index + 1}`}
                   className='project-page-item-image'
+                  id='project-page-item-image'
                   style={{
                     display: activeSDClip === index + 1 ? 'block' : 'none',
                   }}
@@ -129,8 +143,8 @@ const Projects = ({ darkMode, activeSection }) => {
               ))}
             </div>
           </Link>
-          <Link to='/design' className='design-link'>
-            <div className='gd-project-container'>
+          <Link to='/design' className='design-link' id='design-link'>
+            <div className='gd-project-container' id='gd-project-container'>
               <p className='project-page-subtitle'>GRAPHIC DESIGN</p>
               {GDMedia.map((src, index) => (
                 <img
@@ -138,6 +152,7 @@ const Projects = ({ darkMode, activeSection }) => {
                   src={src}
                   alt={`Rotating media ${index + 1}`}
                   className='project-page-item-image'
+                  id='project-page-item-image'
                   style={{
                     display: activeGDClip === index + 1 ? 'block' : 'none',
                   }}
