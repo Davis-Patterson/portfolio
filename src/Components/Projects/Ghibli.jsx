@@ -12,7 +12,7 @@ import Gif3Comp from '/src/assets/ghibli/gif3-comp.gif';
 import Img4 from '/src/assets/ghibli/img4.png';
 import Gif4 from '/src/assets/ghibli/gif4.gif';
 import Gif4Comp from '/src/assets/ghibli/gif4-comp.gif';
-import descriptions from '/src/Util/ghibli.json';
+import descriptions from '/src/Util/Ghibli.json';
 import Progress from '../Progress';
 
 const Ghibli = ({ activeProject, darkMode }) => {
