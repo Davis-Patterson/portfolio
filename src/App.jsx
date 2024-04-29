@@ -1,52 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import useLocalStorageState from 'use-local-storage-state';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './Components/Nav';
 import Home from './Components/Home';
-import About from './Components/About';
-import MiniQuaist from './Components/Mini_Quaist';
-import MiTunes from './Components/MiTunes';
-import Questions from './Components/Questions';
-import Blackjack from './Components/Blackjack';
-import Colors from './Components/Colors';
-import Contact from './Components/Contact';
 import Footer from './Components/Footer';
+import Coding from './Components/Coding';
+import Design from './Components/Design';
+import MiniQuaist from './Components/Projects/Mini_Quaist';
+import Ghibli from './Components/Projects/Ghibli';
+import Blackjack from './Components/Projects/Blackjack';
+import Colors from './Components/Projects/Colors';
+import MiTunes from './Components/Projects/MiTunes';
+import Questions from './Components/Projects/Questions';
+import Robyn from './Components/Projects/Robyn';
+import Retro_Judah from './Components/Projects/Retro_Judah';
+import Mexikaner from './Components/Projects/Mexikaner';
 import './App.css';
-import { dark } from '@mui/material/styles/createPalette';
 
 function App() {
+  const [darkMode, setDarkMode] = useLocalStorageState('darkMode', false);
   const [activeSection, setActiveSection] = useState(null);
   const [activeProject, setActiveProject] = useState(null);
-  const [darkMode, setDarkMode] = useLocalStorageState('darkMode', false);
+  const location = useLocation();
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-            setActiveProject(entry.target.dataset.project);
-          }
-        });
-      },
-      {
-        root: null,
-        threshold: 0.6,
-      }
-    );
-
-    const sections = document.querySelectorAll('section');
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (activeSection) {
-      window.history.pushState(null, null, `#${activeSection}`);
-    }
-  }, [activeSection]);
+    const path = location.pathname.replace('/', '');
+    setActiveProject(path || 'home');
+    setActiveSection(path || 'home');
+  }, [location]);
 
   return (
     <>
@@ -56,30 +37,75 @@ function App() {
         activeSection={activeSection}
         setActiveSection={setActiveSection}
       />
-      <section id='home' data-project='none'>
-        <Home activeSection={activeSection} darkMode={darkMode} />
-      </section>
-      <section id='about' data-project='none'>
-        <About activeSection={activeSection} darkMode={darkMode} />
-      </section>
-      <section id='projects' data-project='miniQuaist'>
-        <MiniQuaist activeProject={activeProject} darkMode={darkMode} />
-      </section>
-      <section id='projects' data-project='MiTunes'>
-        <MiTunes activeProject={activeProject} darkMode={darkMode} />
-      </section>
-      <section id='projects' data-project='blackjack'>
-        <Blackjack activeProject={activeProject} darkMode={darkMode} />
-      </section>
-      <section id='projects' data-project='questions'>
-        <Questions activeProject={activeProject} darkMode={darkMode} />
-      </section>
-      <section id='projects' data-project='colors'>
-        <Colors activeProject={activeProject} darkMode={darkMode} />
-      </section>
-      <section id='contact' data-project='none'>
-        <Contact activeSection={activeSection} darkMode={darkMode} />
-      </section>
+      <Routes>
+        <Route
+          path='/'
+          element={
+            <Home
+              darkMode={darkMode}
+              activeSection={activeSection}
+              setActiveSection={setActiveSection}
+              setActiveProject={setActiveProject}
+            />
+          }
+        />
+        <Route
+          path='/development'
+          element={<Coding darkMode={darkMode} activeSection={activeSection} />}
+        />
+        <Route
+          path='/design'
+          element={<Design darkMode={darkMode} activeSection={activeSection} />}
+        />
+        <Route
+          path='development/miniquaist'
+          element={
+            <MiniQuaist activeProject={activeProject} darkMode={darkMode} />
+          }
+        />
+        <Route
+          path='development/ghibli'
+          element={<Ghibli activeProject={activeProject} darkMode={darkMode} />}
+        />
+        <Route
+          path='development/questions'
+          element={
+            <Questions activeProject={activeProject} darkMode={darkMode} />
+          }
+        />
+        <Route
+          path='development/blackjack'
+          element={
+            <Blackjack activeProject={activeProject} darkMode={darkMode} />
+          }
+        />
+        <Route
+          path='development/mitunes'
+          element={
+            <MiTunes activeProject={activeProject} darkMode={darkMode} />
+          }
+        />
+        <Route
+          path='development/colors'
+          element={<Colors activeProject={activeProject} darkMode={darkMode} />}
+        />
+        <Route
+          path='design/robynrobyns'
+          element={<Robyn activeProject={activeProject} darkMode={darkMode} />}
+        />
+        <Route
+          path='design/retrojudah'
+          element={
+            <Retro_Judah activeProject={activeProject} darkMode={darkMode} />
+          }
+        />
+        <Route
+          path='design/mexikaner'
+          element={
+            <Mexikaner activeProject={activeProject} darkMode={darkMode} />
+          }
+        />
+      </Routes>
       <Footer darkMode={darkMode} />
     </>
   );

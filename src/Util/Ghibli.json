@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "desc": "Application shows a slideshow of information about Studio Ghibli films."
+  },
+  {
+    "id": 2,
+    "desc": "Pagination lets the user easily browse through and add films to their favorites list."
+  },
+  {
+    "id": 3,
+    "desc": "Users have the option to pause the progression and filter through information that they'd like to see."
+  },
+  {
+    "id": 4,
+    "desc": "Interactive Ghibli characters playfully duck out of sight when spotted by the user."
+  }
+]

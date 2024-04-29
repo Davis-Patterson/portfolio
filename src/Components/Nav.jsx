@@ -150,7 +150,7 @@ const Nav = ({ darkMode, setDarkMode, activeSection, setActiveSection }) => {
             <div className='dropdown-box'>
               <HashLink
                 smooth
-                to='/#home'
+                to='/#hello'
                 onClick={handleDropdown}
                 className='dropdown-link'
               >

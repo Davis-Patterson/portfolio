@@ -33,7 +33,7 @@ const Progress = ({ isPaused, setIsPaused, progress }) => {
           }}
           fontColor='transparent'
         />
-        <img
+        {/* <img
           src={isPaused ? playIcon : pauseIcon}
           alt='play/pause icon'
           className='pause-icon'
@@ -41,7 +41,7 @@ const Progress = ({ isPaused, setIsPaused, progress }) => {
             right: isPaused ? '3px' : '5px',
             bottom: isPaused ? '5px' : '5.5px',
           }}
-        />
+        /> */}
       </div>
     </>
   );

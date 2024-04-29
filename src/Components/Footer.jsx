@@ -62,7 +62,7 @@ const Footer = ({ darkMode }) => {
         <div className='footer-footer' id='footer-footer'>
           <p className='footer-footer-text'>
             © Copyright 2023. Made by{' '}
-            <HashLink smooth to='/#home' className='footer-text-link'>
+            <HashLink smooth to='/#hello' className='footer-text-link'>
               Davis Patterson
             </HashLink>
             .
