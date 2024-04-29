@@ -7,10 +7,14 @@ import Footer from './Components/Footer';
 import Coding from './Components/Coding';
 import Design from './Components/Design';
 import MiniQuaist from './Components/Projects/Mini_Quaist';
+import Ghibli from './Components/Projects/Ghibli';
 import Blackjack from './Components/Projects/Blackjack';
 import Colors from './Components/Projects/Colors';
 import MiTunes from './Components/Projects/MiTunes';
 import Questions from './Components/Projects/Questions';
+import Robyn from './Components/Projects/Robyn';
+import Retro_Judah from './Components/Projects/Retro_Judah';
+import Mexikaner from './Components/Projects/Mexikaner';
 import './App.css';
 
 function App() {
@@ -60,6 +64,10 @@ function App() {
           }
         />
         <Route
+          path='/ghibli'
+          element={<Ghibli activeProject={activeProject} darkMode={darkMode} />}
+        />
+        <Route
           path='/questions'
           element={
             <Questions activeProject={activeProject} darkMode={darkMode} />
@@ -80,6 +88,22 @@ function App() {
         <Route
           path='/colors'
           element={<Colors activeProject={activeProject} darkMode={darkMode} />}
+        />
+        <Route
+          path='/robynrobyns'
+          element={<Robyn activeProject={activeProject} darkMode={darkMode} />}
+        />
+        <Route
+          path='/retrojudah'
+          element={
+            <Retro_Judah activeProject={activeProject} darkMode={darkMode} />
+          }
+        />
+        <Route
+          path='/mexikaner'
+          element={
+            <Mexikaner activeProject={activeProject} darkMode={darkMode} />
+          }
         />
       </Routes>
       <Footer darkMode={darkMode} />

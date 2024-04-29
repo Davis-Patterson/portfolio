@@ -160,18 +160,18 @@ const Blackjack = ({ activeProject, darkMode }) => {
         {zoomed && (
           <>
             <div ref={zoomedRef} className='big-slideshow-container'>
-              {gifs.map(
-                (gifSrc, index) =>
-                  activeClip === index + 1 && (
-                    <img
-                      key={index}
-                      src={gifSrc}
-                      alt={`Rotating IMG ${index + 1}`}
-                      className='big-slide-gifs'
-                      onClick={handleZoomOut}
-                    />
-                  )
-              )}
+              {gifs.map((gifSrc, index) => (
+                <img
+                  key={index}
+                  src={gifSrc}
+                  alt={`Rotating IMG ${index + 1}`}
+                  className='big-slide-gifs'
+                  onClick={handleZoomOut}
+                  style={{
+                    display: activeClip === index + 1 ? 'block' : 'none',
+                  }}
+                />
+              ))}
               <p className='slide-desc'>{activeDescription}</p>
               <div className='prev-button' onClick={handlePrev}>
                 {'◄'}
@@ -212,18 +212,18 @@ const Blackjack = ({ activeProject, darkMode }) => {
               </a>
             </div>
             <div className='slideshow-container' id='black-slideshow-container'>
-              {gifsComp.map(
-                (gifSrc, index) =>
-                  activeClip === index + 1 && (
-                    <img
-                      key={index}
-                      src={gifSrc}
-                      alt={`Rotating IMG ${index + 1}`}
-                      className='slide-gifs'
-                      onClick={handleZoomIn}
-                    />
-                  )
-              )}
+              {gifsComp.map((gifSrc, index) => (
+                <img
+                  key={index}
+                  src={gifSrc}
+                  alt={`Rotating IMG ${index + 1}`}
+                  className='slide-gifs'
+                  onClick={handleZoomIn}
+                  style={{
+                    display: activeClip === index + 1 ? 'block' : 'none',
+                  }}
+                />
+              ))}
               <p className='slide-desc'>{activeDescription}</p>
               <div className='slide-imgs'>
                 {imgs.map((imgSrc, index) => (

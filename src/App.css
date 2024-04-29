@@ -975,7 +975,14 @@ section {
 
 .landing-page-item-image {
   width: 200px;
+  height: auto;
+  min-height: 112.5;
+  display: block;
   margin: 5px 5px 0px 5px;
+  transition: opacity 0.5s ease;
+}
+.landing-page-item-image {
+  transition: opacity 0.5s ease-in-out;
 }
 
 .project-page-item-text {
@@ -1303,6 +1310,13 @@ section {
 }
 
 .link-button {
+  width: 75px;
+}
+.link-button-wide {
+  width: 90px;
+}
+.link-button,
+.link-button-wide {
   margin: 0px 5px;
   text-align: center;
   border: 1px solid var(--clr-accent);
@@ -1310,14 +1324,15 @@ section {
   padding: 5px 8px 5px 8px;
   color: var(--clr-white);
   border-radius: 5px;
-  width: 75px;
 }
-.link-button:hover {
+.link-button:hover,
+.link-button-wide:hover {
   border: 1px solid var(--clr-accent-dark);
   background-color: var(--clr-accent-dark);
   color: var(--clr-white);
 }
-.link-button:active {
+.link-button:active,
+.link-button-wide:active {
   /* transform: scale(95%); */
 }
 
