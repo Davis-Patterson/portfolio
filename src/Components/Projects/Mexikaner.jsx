@@ -189,8 +189,7 @@ const Mexikaner = ({ activeProject, darkMode }) => {
               <div className='desc-box' id='black-desc-box'>
                 <p className='mini-desc' id='black-desc'>
                   Developed branding and stream assets for The Mexikaner on
-                  Twitch. Contact me if you're interested in elevating the look
-                  of your stream. You can view
+                  Twitch. You can view
                   <em> The Mexikaner</em> on Twitch or on Instagram here:
                 </p>
               </div>
