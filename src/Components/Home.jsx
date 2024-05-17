@@ -44,7 +44,7 @@ function Home({ darkMode, activeSection, setActiveSection, setActiveProject }) {
       <section id='about' data-project='none'>
         <About activeSection={activeSection} darkMode={darkMode} />
       </section>
-      <section id='projects' data-project='miniQuaist'>
+      <section id='projects' data-project='projects'>
         <Projects darkMode={darkMode} activeSection={activeSection} />
       </section>
       <section id='contact' data-project='none'>
